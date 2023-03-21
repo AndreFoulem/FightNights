@@ -83,10 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				901C5FD329C557C200029C77 /* __SCRATCH_PAD__ */,
-				901C5FA829C557AB00029C77 /* Assets.xcassets */,
 				901C5FB929C557AB00029C77 /* FightNightsTests */,
 				901C5FC329C557AB00029C77 /* FightNightsUITests */,
-				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				901C5FA329C557AB00029C77 /* FightNights */,
 				901C5FA229C557AB00029C77 /* Products */,
 			);
@@ -105,6 +103,8 @@
 		901C5FA329C557AB00029C77 /* FightNights */ = {
 			isa = PBXGroup;
 			children = (
+				901C5FA829C557AB00029C77 /* Assets.xcassets */,
+				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				901C5FAA29C557AB00029C77 /* Preview Content */,
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
 				901C5FD529C5586700029C77 /* VIEWS */,

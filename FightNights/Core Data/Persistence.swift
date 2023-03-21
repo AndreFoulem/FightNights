@@ -12,16 +12,28 @@ public class PersistentContainer {
   let container: NSPersistentContainer
   
     // CD.A2 -> Initiate Persistent Container + with Data Model name
-  init() {
+  init(forPreview: Bool = false) {
     
     container = NSPersistentContainer(name: "FightNightsModel")
     
+    if forPreview {
+      container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+    }
+    
     // CD.A3 -> Load up the Persistent Container
     container.loadPersistentStores { _, _ in }
+    
+    if forPreview {
+      addMockData(moc: container.viewContext)
+    }
   }
   
-  
 }
+
+
+
+
+
 
 //struct PersistenceController {
 //    static let shared = PersistenceController()
