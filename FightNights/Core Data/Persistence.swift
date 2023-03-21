@@ -30,6 +30,24 @@ public class PersistentContainer {
   
 }
 
+extension PersistentContainer {
+  func addMockData(moc: NSManagedObjectContext) {
+    let friend1 = PersonEntity(context: moc)
+    friend1.firstName = "Andre"
+    friend1.lastName = "Foule"
+    
+    let friend2 = PersonEntity(context: moc)
+    friend2.firstName = "Joe"
+    friend2.lastName = "Steve"
+    
+    let friend3 = PersonEntity(context: moc)
+    friend3.firstName = "Lion"
+    friend3.lastName = "Radio"
+    
+    try? moc.save()
+  }
+}
+
 
 
 
