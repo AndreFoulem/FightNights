@@ -24,14 +24,25 @@ public class PersistentContainer {
     container.loadPersistentStores { _, _ in }
     
     if forPreview {
-      addMockData(moc: container.viewContext)
+      PersistentContainer.addMockData(moc: container.viewContext)
     }
   }
   
 }
 
 extension PersistentContainer {
-  func addMockData(moc: NSManagedObjectContext) {
+  static var preview: NSManagedObjectContext {
+    get {
+      let previewContainer = NSPersistentContainer(name: "FightNightsModel")
+      previewContainer.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
+      previewContainer.loadPersistentStores { _, _ in }
+      addMockData(moc: previewContainer.viewContext)
+      return previewContainer.viewContext
+    }
+  }
+  
+  
+  static func addMockData(moc: NSManagedObjectContext) {
     let friend1 = PersonEntity(context: moc)
     friend1.firstName = "Andre"
     friend1.lastName = "Foule"

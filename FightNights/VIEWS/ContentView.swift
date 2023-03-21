@@ -41,6 +41,6 @@ var body: some View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        .environment(\.managedObjectContext,PersistentContainer(forPreview: true).container.viewContext)
+        .environment(\.managedObjectContext, PersistentContainer.preview)
     }
 }
