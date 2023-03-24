@@ -31,6 +31,7 @@ public class PersistentContainer {
 }
 
 extension PersistentContainer {
+  
   static var preview: NSManagedObjectContext {
     get {
       let previewContainer = NSPersistentContainer(name: "FightNightsModel")
@@ -43,18 +44,30 @@ extension PersistentContainer {
   
   
   static func addMockData(moc: NSManagedObjectContext) {
-    let friend1 = PersonEntity(context: moc)
-    friend1.firstName = "Andre"
-    friend1.lastName = "Foule"
+    let BookA = BookEntity(context: moc)
+    BookA.title = "my book"
+    BookA.pages = 13
+    BookA.available = true
+    BookA.price = 40
+    BookA.url = URL(string: "https://www.google.com")
+    BookA.lastUpdated = Date.now
     
-    let friend2 = PersonEntity(context: moc)
-    friend2.firstName = "Joe"
-    friend2.lastName = "Steve"
+    let BookB = BookEntity(context: moc)
+    BookB.title = "my book2"
+    BookB.pages = 13
+    BookB.available = true
+    BookB.price = 40
+    BookB.url = URL(string: "https://www.google.com")
+    BookB.lastUpdated = Date.now
     
-    let friend3 = PersonEntity(context: moc)
-    friend3.firstName = "Lion"
-    friend3.lastName = "Radio"
-    
+    let BookC = BookEntity(context: moc)
+    BookC.title = "my boo3k"
+    BookC.pages = 13
+    BookC.available = true
+    BookC.price = 40
+    BookC.url = URL(string: "https://www.google.com")
+    BookC.lastUpdated = Date.now
+
     try? moc.save()
   }
 }
