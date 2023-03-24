@@ -18,8 +18,9 @@ struct ContentView: View {
   private var books: FetchedResults<BookEntity>
 
     var body: some View {
-      List(books) { _ in
-          Text("")
+      List(books) { book in
+        Text(book.title)
+        
       }
     }//body
   

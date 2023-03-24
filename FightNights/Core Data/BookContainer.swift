@@ -45,28 +45,28 @@ extension PersistentContainer {
   
   static func addMockData(moc: NSManagedObjectContext) {
     let BookA = BookEntity(context: moc)
-    BookA.title = "my book"
+    BookA.title_ = "my book"
     BookA.pages = 13
     BookA.available = true
-    BookA.price = 40
-    BookA.url = URL(string: "https://www.google.com")
-    BookA.lastUpdated = Date.now
+    BookA.price_ = 40
+    BookA.url_ = URL(string: "https://www.google.com")
+    BookA.lastUpdated_ = Date.now
     
     let BookB = BookEntity(context: moc)
-    BookB.title = "my book2"
+    BookB.title_ = "my book2"
     BookB.pages = 13
     BookB.available = true
-    BookB.price = 40
-    BookB.url = URL(string: "https://www.google.com")
-    BookB.lastUpdated = Date.now
+    BookB.price_ = 40
+    BookB.url_ = URL(string: "https://www.google.com")
+    BookB.lastUpdated_ = Date.now
     
     let BookC = BookEntity(context: moc)
-    BookC.title = "my boo3k"
+    BookC.title_ = "my boo3k"
     BookC.pages = 13
     BookC.available = true
-    BookC.price = 40
-    BookC.url = URL(string: "https://www.google.com")
-    BookC.lastUpdated = Date.now
+    BookC.price_ = 40
+    BookC.url_ = URL(string: "https://www.google.com")
+    BookC.lastUpdated_ = Date.now
 
     try? moc.save()
   }

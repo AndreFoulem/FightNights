@@ -36,6 +36,13 @@ extension BookEntity {
     return formatter.string(from: self.price_ ?? 0)!
   }
   
+  var url: URL {
+    return self.url_ ?? URL(string: "https://www.rds.ca")!
+  }
+  
+  var bookid: String {
+    bookid_?.uuidString ?? "no id"
+  }
   
   
 }
