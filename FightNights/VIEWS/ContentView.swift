@@ -15,19 +15,19 @@ struct ContentView: View {
   
   // C.2 Wrap a fetch request in ContentView
   @FetchRequest(sortDescriptors: [])
-  private var people: FetchedResults<PersonEntity>
+  private var books: FetchedResults<BookEntity>
   
 
   
 var body: some View {
     
    VStack {
-      List(people) { person in
-        Text(person.firstName ?? "")
+      List(books) { book in
+        Text(book.title ?? "")
       }
-      Button("Add a person") {
-        let person = PersonEntity(context: context)
-        person.firstName = ["Andre", "joe", "luc"].randomElement()
+      Button("Add a book") {
+        let book = BookEntity(context: context)
+        book.title = ["book1", "book2", "book3"].randomElement()
         try? context.save()
       }
     }
