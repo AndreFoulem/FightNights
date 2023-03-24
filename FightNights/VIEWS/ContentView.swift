@@ -19,7 +19,22 @@ struct ContentView: View {
 
     var body: some View {
       List(books) { book in
-        Text(book.title)
+        VStack{
+          Image(uiImage: book.cover)
+          Text(book.title)
+          HStack {
+            Text(book.title)
+            Spacer()
+          }
+          Text(book.lastUpdated)
+          Text(book.viewPages)
+          Text(book.price)
+          Link(destination: book.url) {
+            Text("learn more")
+          }
+          Text(book.bookid)
+            .font(.caption)
+        }
         
       }
     }//body

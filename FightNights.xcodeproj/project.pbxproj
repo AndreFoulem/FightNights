@@ -106,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				901C5FA829C557AB00029C77 /* Assets.xcassets */,
+				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				901C5FAA29C557AB00029C77 /* Preview Content */,
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
 				901C5FD529C5586700029C77 /* VIEWS */,
@@ -167,7 +168,6 @@
 		901C5FD629C5589C00029C77 /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				9092BDEB29CD522600685FC4 /* BookEntity+.swift */,
 				901C5FAD29C557AB00029C77 /* BookContainer.swift */,
 			);
