@@ -18,6 +18,7 @@
 		901C5FC729C557AB00029C77 /* FightNightsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */; };
 		901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FD829C5596200029C77 /* ContentView_blueprint.swift */; };
 		901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */; };
+		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightNightsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		901C5FD829C5596200029C77 /* ContentView_blueprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_blueprint.swift; sourceTree = "<group>"; };
 		901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence_bluepring.swift; sourceTree = "<group>"; };
+		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 		901C5FD429C5585500029C77 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
+				9092BDEB29CD522600685FC4 /* BookEntity+.swift */,
 			);
 			path = MODEL;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				901C5FAE29C557AB00029C77 /* Persistence.swift in Sources */,
 				901C5FA729C557AB00029C77 /* ContentView.swift in Sources */,
