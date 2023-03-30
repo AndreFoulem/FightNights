@@ -33,5 +33,10 @@ public class ParksContainer {
 extension ParksContainer {
   static func addMockData(moc: NSManagedObjectContext) {
     let firstPark = ParkEntity(context: moc)
+    firstPark.name_ = "White Rock"
+    firstPark.country_ = "Canada"
+    firstPark.rating = 5
+    firstPark.region_ = "BC"
+    firstPark.image_ = nil
   }
 }
