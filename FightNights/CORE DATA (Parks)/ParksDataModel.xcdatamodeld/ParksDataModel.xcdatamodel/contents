@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ParksEntity" representedClassName="ParksEntity" syncable="YES" codeGenerationType="class">
+    <entity name="ParkEntity" representedClassName="ParkEntity" syncable="YES" codeGenerationType="class">
         <attribute name="country_" optional="YES" attributeType="String"/>
         <attribute name="image_" optional="YES" attributeType="Binary"/>
         <attribute name="name_" optional="YES" attributeType="String"/>
