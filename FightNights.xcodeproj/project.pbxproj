@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FA429C557AB00029C77 /* FightNightsApp.swift */; };
-		901C5FA729C557AB00029C77 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FA629C557AB00029C77 /* ContentView.swift */; };
+		901C5FA729C557AB00029C77 /* BookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FA629C557AB00029C77 /* BookView.swift */; };
 		901C5FA929C557AB00029C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901C5FA829C557AB00029C77 /* Assets.xcassets */; };
 		901C5FAC29C557AB00029C77 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 901C5FAB29C557AB00029C77 /* Preview Assets.xcassets */; };
 		901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FAD29C557AB00029C77 /* BookContainer.swift */; };
@@ -41,7 +41,7 @@
 /* Begin PBXFileReference section */
 		901C5FA129C557AB00029C77 /* FightNights.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FightNights.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		901C5FA429C557AB00029C77 /* FightNightsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightNightsApp.swift; sourceTree = "<group>"; };
-		901C5FA629C557AB00029C77 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		901C5FA629C557AB00029C77 /* BookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookView.swift; sourceTree = "<group>"; };
 		901C5FA829C557AB00029C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		901C5FAB29C557AB00029C77 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		901C5FAD29C557AB00029C77 /* BookContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookContainer.swift; sourceTree = "<group>"; };
@@ -106,12 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				901C5FA829C557AB00029C77 /* Assets.xcassets */,
-				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				901C5FAA29C557AB00029C77 /* Preview Content */,
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
-				901C5FD529C5586700029C77 /* VIEWS */,
+				901C5FD529C5586700029C77 /* VIEWS (SHEETS) */,
+				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				901C5FD429C5585500029C77 /* MODEL */,
-				901C5FD629C5589C00029C77 /* Core Data */,
 			);
 			path = FightNights;
 			sourceTree = "<group>";
@@ -157,21 +156,22 @@
 			path = MODEL;
 			sourceTree = "<group>";
 		};
-		901C5FD529C5586700029C77 /* VIEWS */ = {
+		901C5FD529C5586700029C77 /* VIEWS (SHEETS) */ = {
 			isa = PBXGroup;
 			children = (
-				901C5FA629C557AB00029C77 /* ContentView.swift */,
+				901C5FA629C557AB00029C77 /* BookView.swift */,
 			);
-			path = VIEWS;
+			path = "VIEWS (SHEETS)";
 			sourceTree = "<group>";
 		};
-		901C5FD629C5589C00029C77 /* Core Data */ = {
+		901C5FD629C5589C00029C77 /* CORE DATA (Books) */ = {
 			isa = PBXGroup;
 			children = (
+				901C5FAF29C557AB00029C77 /* FightNightsModel.xcdatamodeld */,
 				9092BDEB29CD522600685FC4 /* BookEntity+.swift */,
 				901C5FAD29C557AB00029C77 /* BookContainer.swift */,
 			);
-			path = "Core Data";
+			path = "CORE DATA (Books)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +307,7 @@
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
-				901C5FA729C557AB00029C77 /* ContentView.swift in Sources */,
+				901C5FA729C557AB00029C77 /* BookView.swift in Sources */,
 				901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,

@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct BookView: View {
   
   // C.1 import the context from environment
   @Environment(\.managedObjectContext) var context
@@ -49,9 +49,9 @@ struct ContentView: View {
   }
 
 
-struct ContentView_Previews: PreviewProvider {
+struct BookView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BookView()
         .environment(\.managedObjectContext, PersistentContainer.preview)
     }
 }

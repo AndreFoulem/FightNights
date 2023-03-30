@@ -19,7 +19,7 @@ struct FightNightsApp: App {
     var body: some Scene {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-            ContentView()
+            BookView()
             .environment(\.managedObjectContext, PersistentContainer().container.viewContext)
         }
     }
