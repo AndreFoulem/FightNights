@@ -22,6 +22,7 @@
 		90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180829D606D1003F591B /* ParksDataModel.xcdatamodeld */; };
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
 		90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180D29D60BC2003F591B /* ParksContainer.swift */; };
+		90D3181329D615D9003F591B /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3181229D615D9003F591B /* ParksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
 		90D3180D29D60BC2003F591B /* ParksContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksContainer.swift; sourceTree = "<group>"; };
+		90D3181229D615D9003F591B /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				901C5FA629C557AB00029C77 /* BookView.swift */,
+				90D3181229D615D9003F591B /* ParksView.swift */,
 			);
 			path = "VIEWS (SHEETS)";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
 				901C5FA729C557AB00029C77 /* BookView.swift in Sources */,
 				901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */,
+				90D3181329D615D9003F591B /* ParksView.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
 				90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */,
