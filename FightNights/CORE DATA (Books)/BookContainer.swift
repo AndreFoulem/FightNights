@@ -12,7 +12,7 @@ public class PersistentContainer {
   let container: NSPersistentContainer
   
     // CD.A2 -> Initiate Persistent Container + with Data Model name
-  init(forPreview: Bool = false) {
+  init(forPreview: Bool = true) {
     
     container = NSPersistentContainer(name: "FightNightsModel")
     
