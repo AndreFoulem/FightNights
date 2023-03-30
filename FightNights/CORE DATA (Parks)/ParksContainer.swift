@@ -29,3 +29,9 @@ public class ParksContainer {
       }
   }
 }
+
+extension ParksContainer {
+  static func addMockData(moc: NSManagedObjectContext) {
+    let firstPark = ParkEntity(context: moc)
+  }
+}
