@@ -110,6 +110,7 @@
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
 				901C5FD529C5586700029C77 /* VIEWS (SHEETS) */,
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
+				90D3180729D604B2003F591B /* CORE DATA (Parks) */,
 				901C5FD429C5585500029C77 /* MODEL */,
 			);
 			path = FightNights;
@@ -172,6 +173,13 @@
 				901C5FAD29C557AB00029C77 /* BookContainer.swift */,
 			);
 			path = "CORE DATA (Books)";
+			sourceTree = "<group>";
+		};
+		90D3180729D604B2003F591B /* CORE DATA (Parks) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "CORE DATA (Parks)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
