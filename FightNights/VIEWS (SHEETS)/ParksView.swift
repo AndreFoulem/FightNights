@@ -24,7 +24,11 @@ struct ParksView: View {
               .cornerRadius(8)
             
             VStack(alignment: .leading, spacing: 4) {
-              Text(park.viewName).font(.title)
+              HStack {
+                Text(park.viewName)
+                Spacer()
+                Image(systemName: park.viewRating)
+              }.font(.title)
               Text(park.viewLocation).fontWeight(.light)
             }
             Spacer()
