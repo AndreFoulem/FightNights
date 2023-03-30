@@ -12,13 +12,14 @@ import UIKit
 extension ParkEntity {
   
   var viewImage: UIImage {
-    if let image_,
-      let image = UIImage(data: image_) {
+    if let data = self.image_,
+       let image = UIImage(data: data) {
         return image
-    } else {
-      return UIImage(systemName: "photo")!
-    }
+    } else { return UIImage(systemName: "photo")! }
   }
-  
-  
+  var viewName: String { self.name_ ?? "[No Park Name]" }
+  var viewRegion: String { self.region_ ?? "N/A" }
+  var viewCountry: String { self.country_ ?? "N/A" }
+  var viewLocation: String { viewRegion + ", " + viewCountry }
+  var viewRating: String { "\(self.rating).circle.fill" }
 }
