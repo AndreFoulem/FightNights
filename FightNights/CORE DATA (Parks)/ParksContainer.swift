@@ -35,8 +35,31 @@ extension ParksContainer {
     let firstPark = ParkEntity(context: moc)
     firstPark.name_ = "White Rock"
     firstPark.country_ = "Canada"
-    firstPark.rating = 5
+    firstPark.rating = 2
     firstPark.region_ = "BC"
     firstPark.image_ = nil
+    
+    let secondPark = ParkEntity(context: moc)
+    firstPark.name_ = "Surrey"
+    firstPark.country_ = "Canada"
+    firstPark.rating = 7
+    firstPark.region_ = "BC"
+    firstPark.image_ = nil
+    
+    let thirdPark = ParkEntity(context: moc)
+    firstPark.name_ = "Mexico"
+    firstPark.country_ = "USA"
+    firstPark.rating = 8
+    firstPark.region_ = "WE"
+    firstPark.image_ = nil
+    
+    let fourthPark = ParkEntity(context: moc)
+    firstPark.name_ = "San Fran"
+    firstPark.country_ = "USA"
+    firstPark.rating = 4
+    firstPark.region_ = "OR"
+    firstPark.image_ = nil
+    
+    try! moc.save()
   }
 }
