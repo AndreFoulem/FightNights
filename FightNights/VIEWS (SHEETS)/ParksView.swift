@@ -10,11 +10,11 @@ import SwiftUI
 struct ParksView: View {
   //MARK: fetch request
   @Environment(\.managedObjectContext) var context
-  @FetchRequest<ParkEntity>(sortDescriptors:
-                              [SortDescriptor(\.name_)]) private var parks
+  @FetchRequest<ParkEntity>(
+    sortDescriptors: []) private var parks
   
   //MARK: state (local)
-  @State private var sortAscending = true
+  @State private var justCanada = false
   
     var body: some View {
       NavigationStack {
@@ -42,12 +42,11 @@ struct ParksView: View {
         .toolbar {
           ToolbarItem {
             Button {
-              sortAscending.toggle()
+              justCanada.toggle()
               //! using the parks FetchResults sortDescriptors
-              parks.sortDescriptors =
-              [SortDescriptor(\.name_, order: sortAscending ? .forward: .reverse)]
+              parks.nsPredicate = justCanada ? NSPredicate(format: "country_ = %@", "Canada") : nil
             } label: {
-              Image(systemName: sortAscending ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+              Image(systemName: justCanada ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
             }
           }
         }
