@@ -8,14 +8,31 @@
 import SwiftUI
 
 struct TasksView: View {
+   //-> Expose the managedObjectContext
+   @Environment(\.managedObjectContext) var context
+   @FetchRequest<TaskEntity>(sortDescriptors: []) var tasks
   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      List {
+        ForEach(tasks) { task in
+          Text(task.viewTaskName)
+            .strikethrough(task.done, color: .red)
+        }
+        .onDelete(perform: deleteTask)
+      }
     }
+  
+  private func deleteTask(offsets: IndexSet) {
+    for offset in offsets {
+      context.delete(tasks[offset])
+    }
+    try? context.save()
+  }
 }
 
 struct TasksView_Previews: PreviewProvider {
     static var previews: some View {
         TasksView()
+        .environment(\.managedObjectContext, TaskContainer.preview)
     }
 }
