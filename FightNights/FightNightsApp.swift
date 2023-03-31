@@ -16,13 +16,6 @@ import SwiftUI
 @main
 struct FightNightsApp: App {
 
-//    var body: some Scene {
-//        WindowGroup {
-//            //: B -> Reference the viewContext in .environment
-//            BookView()
-//            .environment(\.managedObjectContext, PersistentContainer().container.viewContext)
-//        }
-//    }
     var body: some Scene {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
