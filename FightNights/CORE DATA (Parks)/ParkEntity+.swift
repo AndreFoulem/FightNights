@@ -19,7 +19,8 @@ extension ParkEntity {
   }
   var viewName: String { self.name_ ?? "[No Park Name]" }
   var viewRegion: String { self.region_ ?? "N/A" }
-  var viewCountry: String { self.country_ ?? "N/A" }
+  @objc var viewCountry: String { self.country_  ?? "N/A" }
+  @objc var viewSuperCountry: String { viewCountry + " SUPER " }
   var viewLocation: String { viewRegion + ", " + viewCountry }
   var viewRating: String { "\(self.rating).circle.fill" }
 }

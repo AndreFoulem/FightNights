@@ -11,34 +11,32 @@ struct ParksView: View {
   //MARK: fetch request
   @Environment(\.managedObjectContext) var context
 //  @FetchRequest<ParkEntity>(sortDescriptors: [] ) private var parks
+  @SectionedFetchRequest<String, ParkEntity>(sectionIdentifier: \.viewSuperCountry, sortDescriptors: [SortDescriptor(\.country_)] ) private var parks
 
   //MARK: state (local)
-  @State private var parksCount = 0
-  @State private var parkArray: [String] = []
-  
     var body: some View {
       NavigationStack {
-        List {
-          VStack {
-            Text("Parks")
-              .bold().badge(parksCount).font(.title2)
-            Text(parkArray, format: .list(type: .and, width: .standard))
-              .fixedSize(horizontal: false, vertical: true)
-          }
-        }//list
-        .task {
-          let request = ParkEntity.fetchRequest()
-          request.predicate = NSPredicate(format: "country_ CONTAINS %@", "Canada")
-          request.sortDescriptors = [NSSortDescriptor(key: "name_", ascending: true)]
-          if let parks = try? context.fetch(request) {
-            parksCount = parks.count
-            
-            for park in parks {
-              parkArray.append(park.viewName)
-            }
+        List(parks) { section in
+          Section {
+            ForEach(section) { park in
+              HStack {
+                VStack(alignment: .leading) {
+                  Text(park.viewName).bold()
+                  Text(park.viewLocation)
+                }
+                .font(.title2)
+              }//hs
+              
+            }//for
+          } header: {
+            Text(section.id)
           }
           
-        }//task
+          
+        }//list
+        .headerProminence(.increased)
+        .navigationTitle("Parks")
+        .listStyle(.automatic)
       }//ns
       
     }//body
