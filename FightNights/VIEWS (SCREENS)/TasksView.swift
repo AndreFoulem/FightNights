@@ -11,46 +11,31 @@ struct TasksView: View {
    //-> Expose the managedObjectContext
    @Environment(\.managedObjectContext) var context
    @FetchRequest<TaskEntity>(sortDescriptors: [SortDescriptor(\.done)]) var tasks
-   @State private var newTask = false
+
    
     var body: some View {
       NavigationStack {
-        
-        List {
-          ForEach(tasks) { task in
-            
-            NavigationLink {
-              EditTaskView()
-            } label: {
-              HStack {
-                VStack(alignment: .leading) {
+          List {
+            ForEach(tasks) { task in
                   Text(task.viewTaskName)
                     .strikethrough(task.done, color: .red)
-                  Text(task.viewDueDate)
-                    .font(.caption)
-                }
-                Spacer()
-                Image(systemName: task.viewPriority)
-                  .font(.title)
-                  .foregroundColor(task.viewPriorityColor)
+                    .foregroundColor(.blue)
+            }//for
+            .onDelete(perform: deleteTask)
+          }//list
+          .navigationTitle("Don't Forget")
+          .toolbar {
+            ToolbarItemGroup {
+              Button {
+                context.undo()
+              } label: {
+              Image(systemName: "arrow.uturn.left")
               }
-            }//nl
-            
-          }//for
-        }//list
-        .navigationTitle("Tasks")
-        .toolbar {
-          ToolbarItem {
-            Button {
-              newTask.toggle()
-            } label: {
-            Image(systemName: "plus")
+              Button {
+                try? context.save()
+              } label: { Image(systemName: "checkmark") }
             }
-          }
-        }//toolbar
-        .sheet(isPresented: $newTask) {
-          EditTaskView()
-        }
+          }//toolbar
       }//ns
 
     }//body
@@ -59,7 +44,6 @@ struct TasksView: View {
     for offset in offsets {
       context.delete(tasks[offset])
     }
-    try? context.save()
   }
 }
 
