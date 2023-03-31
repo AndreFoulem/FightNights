@@ -11,45 +11,53 @@ struct ParksView: View {
   //MARK: fetch request
   @Environment(\.managedObjectContext) var context
   @FetchRequest<ParkEntity>(
-    sortDescriptors: []) private var parks
+    sortDescriptors: [] ) private var parks
   
   //MARK: state (local)
   @State private var justCanada = false
   
     var body: some View {
       NavigationStack {
-        List(parks) { park in
-          HStack {
-            Image(uiImage: park.viewImage)
-              .resizable()
-              .scaledToFit()
-              .frame(height: 60)
-              .cornerRadius(8)
-            
-            VStack(alignment: .leading, spacing: 4) {
-              HStack {
-                Text(park.viewName)
-                Spacer()
-                Image(systemName: park.viewRating)
-              }.font(.title)
-              Text(park.viewLocation).fontWeight(.light)
+        ScrollView {
+          ForEach(parks) { park in
+            HStack {
+              Image(uiImage: park.viewImage)
+                .resizable()
+                .scaledToFit()
+                .frame(height: 60)
+                .cornerRadius(8)
+              
+              VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                  Text(park.viewName)
+                  Spacer()
+                  Image(systemName: park.viewRating)
+                }.font(.title)
+                Text(park.viewLocation).fontWeight(.light)
+              }
+              Spacer()
             }
-            Spacer()
-          }
-          .padding(.vertical, 8)
-        }//list
-        .navigationTitle("Parks")
-        .toolbar {
-          ToolbarItem {
+            .padding(.vertical, 8)
+          }//list
+          .navigationTitle("Parks")
+          .toolbar {
             Button {
-              justCanada.toggle()
-              //! using the parks FetchResults sortDescriptors
-              parks.nsPredicate = justCanada ? NSPredicate(format: "country_ = %@", "Canada") : nil
+              withAnimation(.easeOut(duration: 0.4)) {
+                justCanada.toggle()
+                parks.nsPredicate = justCanada
+                ? NSPredicate(format: "country_ = 'Canada'")
+                : nil
+              }
+        
             } label: {
-              Image(systemName: justCanada ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+              Image(systemName: justCanada
+              ? "globe.americas.fill"
+                    : "globe.americas")
             }
           }
-        }
+        
+        }.padding(.horizontal)
+
       }//ns
       
     }//body
