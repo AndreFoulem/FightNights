@@ -20,6 +20,9 @@ public class CountriesContainer {
     if(forPreview) {
       CountriesContainer.addMockData(moc: container.viewContext)
     }
+    
+    let context = container.viewContext
+    context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
   }
 }
 
