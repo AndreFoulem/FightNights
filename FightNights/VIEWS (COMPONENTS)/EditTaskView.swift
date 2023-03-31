@@ -14,8 +14,7 @@ struct EditTaskView: View {
   @State private var priority = 0
   @State private var dueDate = Date()
   
-  let task: TaskEntity?
-  
+  @State private var newTask = false
   var body: some View {
     VStack(spacing: 16) {
       TextField("task", text: $taskName)
@@ -33,10 +32,13 @@ struct EditTaskView: View {
       }
     DatePicker("DueDate", selection: $dueDate)
       Button("Save") {
-        task?.taskName = taskName
-        task?.priority = Int16(priority)
-        task?.dueData = dueDate
+        // CREATE NEW ENTITY
+        let task = TaskEntity(context: context)
+        task.taskName = taskName
+        task.priority = Int16(priority)
+        task.dueData = dueDate
         
+        // SAVE NEW ENTITY
         try? context.save()
         
         dismiss()
@@ -44,20 +46,37 @@ struct EditTaskView: View {
       .buttonStyle(.borderedProminent)
       .frame(maxWidth: .infinity)
       Spacer()
+      
+//      Button(newTask ? "Add" : "Update") {
+//        if newTask {
+//          let newTask = TaskEntity(context: context)
+//          newTask.taskName = taskName
+//          newTask.priority = Int16(priority)
+//          newTask.dueData = dueDate
+//        } else {
+//          todo?.taskName = taskName
+//          todo?.priority = Int16(priority)
+//          todo?.dueDate = dueDate
+//        }
+//        try? context.save()
+//
+//        dismiss()
+//      }
+      
     }//vs
     .padding()
-    .onAppear {
-      taskName = task?.viewTaskName ?? ""
-      priority = Int(task?.priority ?? 0)
-      dueDate = task?.dueData ?? Date()
-    }
+//    .onAppear {
+//      taskName = task?.viewTaskName ?? ""
+//      priority = Int(task?.priority ?? 0)
+//      dueDate = task?.dueData ?? Date()
+//    }
     .navigationTitle("Edit Task")
   }
 }
 
 struct EditTaskView_Previews: PreviewProvider {
     static var previews: some View {
-      EditTaskView(task: TaskEntity())
+      EditTaskView()
         .environment(\.managedObjectContext, TaskContainer.preview)
     }
 }
