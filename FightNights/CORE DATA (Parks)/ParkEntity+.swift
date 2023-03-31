@@ -7,10 +7,10 @@
 
 import SwiftUI
 import UIKit
+import CoreData
 
-//-> Handle nils and formatting
+//-> FORMAT ATTRIBUTES + OPTIONALS
 extension ParkEntity {
-  
   var viewImage: UIImage {
     if let data = self.image_,
        let image = UIImage(data: data) {
@@ -22,4 +22,16 @@ extension ParkEntity {
   var viewCountry: String { self.country_ ?? "N/A" }
   var viewLocation: String { viewRegion + ", " + viewCountry }
   var viewRating: String { "\(self.rating).circle.fill" }
+}
+
+//-> FETCH REQUESTS
+extension ParkEntity {
+  static var firstViewRequest: NSFetchRequest<ParkEntity> {
+    let request = ParkEntity.fetchRequest()
+    
+    request.sortDescriptors = [NSSortDescriptor(keyPath: \ParkEntity.name_, ascending: true)]
+    request.fetchLimit = 5
+    
+    return request
+  }
 }
