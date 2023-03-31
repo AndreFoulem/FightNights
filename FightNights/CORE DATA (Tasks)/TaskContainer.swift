@@ -18,8 +18,7 @@ public class TaskContainer {
     container.loadPersistentStores { _, _ in }
     
     if(forPreview) {
-      // TaskContainer.addMockData(moc: container.viewContext)
-    }
+       TaskContainer.addMockData(moc: container.viewContext) }
   }
 }
 
