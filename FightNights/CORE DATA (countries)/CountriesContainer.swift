@@ -18,23 +18,46 @@ public class CountriesContainer {
     container.loadPersistentStores { _, _ in }
     
     if(forPreview) {
-//      CountriesContainer.addMockData(context: container.viewContext)
+      CountriesContainer.addMockData(moc: container.viewContext)
     }
   }
 }
 
 extension CountriesContainer {
   
-//  static var preview: NSManagedObjectContext {
-//    let container = NSPersistentContainer(name: "CountriesDataModel")
-//    container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
-//    container.loadPersistentStores { _, _ in }
-//    self.addMockData(context: container.viewContext)
-//    return container.viewContext
-//  }
+  static var preview: NSManagedObjectContext {
+    let container = NSPersistentContainer(name: "CountriesDataModel")
+    container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
+    container.loadPersistentStores { _, _ in }
+    self.addMockData(moc: container.viewContext)
+    return container.viewContext
+  }
   
-  static func addMockData() {
-    
+  static func addMockData(moc: NSManagedObjectContext) {
+     let one = CountryEntity(context: moc)
+     one.name = "Canada"
+     one.lastVisited = Date.now
+    let two = CountryEntity(context: moc)
+     two.name = "USA"
+     two.lastVisited = Date.now
+    let three = CountryEntity(context: moc)
+     three.name = "Mexico"
+     three.lastVisited = Date.now
+    let four = CountryEntity(context: moc)
+     four.name = "Russia"
+     four.lastVisited = Date.now
+    let five = CountryEntity(context: moc)
+     five.name = "China"
+     five.lastVisited = Date.now
+    let six = CountryEntity(context: moc)
+     six.name = "Australia"
+     six.lastVisited = Date.now
+    let seven = CountryEntity(context: moc)
+     seven.name = "Japan"
+     seven.lastVisited = Date.now
+    let height = CountryEntity(context: moc)
+     height.name = "Chile"
+     height.lastVisited = Date.now
   }
   
 }
