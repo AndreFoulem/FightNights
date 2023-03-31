@@ -12,7 +12,7 @@ struct TasksView: View {
    @Environment(\.managedObjectContext) var context
    @FetchRequest<TaskEntity>(sortDescriptors: [SortDescriptor(\.done)]) var tasks
 
-   
+   @State private var allSaved = true
     var body: some View {
       NavigationStack {
           List {
@@ -28,12 +28,17 @@ struct TasksView: View {
             ToolbarItemGroup {
               Button {
                 context.undo()
+                allSaved = (context.hasChanges == false)
               } label: {
               Image(systemName: "arrow.uturn.left")
               }
+              .disabled(allSaved)
+            
               Button {
                 try? context.save()
+                allSaved = (context.hasChanges == false)
               } label: { Image(systemName: "checkmark") }
+                .disabled(allSaved)
             }
           }//toolbar
       }//ns
@@ -43,6 +48,7 @@ struct TasksView: View {
   private func deleteTask(offsets: IndexSet) {
     for offset in offsets {
       context.delete(tasks[offset])
+      allSaved = false
     }
   }
 }

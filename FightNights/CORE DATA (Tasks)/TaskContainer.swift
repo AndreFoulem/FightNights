@@ -17,6 +17,8 @@ public class TaskContainer {
     let context = container.viewContext
     context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
     context.undoManager = UndoManager()
+    context.undoManager?.levelsOfUndo = 2
+ 
     
     if(forPreview) {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")

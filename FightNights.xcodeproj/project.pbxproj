@@ -139,6 +139,7 @@
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				9045722C29D772FD0055ED3E /* CORE DATA (countries) */,
 				90D3180729D604B2003F591B /* CORE DATA (Parks) */,
+				90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */,
 				9021441229D6812C00926E4A /* CORE DATA (Tasks) */,
 				901C5FD429C5585500029C77 /* MODEL */,
 			);
@@ -243,6 +244,13 @@
 				90D3180D29D60BC2003F591B /* ParksContainer.swift */,
 			);
 			path = "CORE DATA (Parks)";
+			sourceTree = "<group>";
+		};
+		90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "CORE DATA (Autos)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
