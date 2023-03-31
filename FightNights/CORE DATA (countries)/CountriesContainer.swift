@@ -23,3 +23,19 @@ public class CountriesContainer {
   }
 }
 
+extension CountriesContainer {
+  
+//  static var preview: NSManagedObjectContext {
+//    let container = NSPersistentContainer(name: "CountriesDataModel")
+//    container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
+//    container.loadPersistentStores { _, _ in }
+//    self.addMockData(context: container.viewContext)
+//    return container.viewContext
+//  }
+  
+  static func addMockData() {
+    
+  }
+  
+}
+
