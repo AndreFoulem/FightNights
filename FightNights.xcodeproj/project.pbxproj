@@ -19,6 +19,7 @@
 		901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FD829C5596200029C77 /* ContentView_blueprint.swift */; };
 		901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */; };
 		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
+		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180829D606D1003F591B /* ParksDataModel.xcdatamodeld */; };
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
@@ -59,6 +60,7 @@
 		901C5FD829C5596200029C77 /* ContentView_blueprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_blueprint.swift; sourceTree = "<group>"; };
 		901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence_bluepring.swift; sourceTree = "<group>"; };
 		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */,
+				9021441629D682C000926E4A /* TaskEntity+.swift */,
 			);
 			path = "CORE DATA (Tasks)";
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				90D3181329D615D9003F591B /* ParksView.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
+				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,
 				90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
