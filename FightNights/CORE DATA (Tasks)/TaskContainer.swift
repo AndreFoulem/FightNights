@@ -39,6 +39,24 @@ extension TaskContainer {
     firstTask.priority = 0
     firstTask.dueData = nil
     
+    let secondTask = TaskEntity(context: moc)
+    secondTask.taskName = "Sell stuff"
+    secondTask.done = false
+    secondTask.priority = 0
+    secondTask.dueData = nil
+    
+    let thirdTask = TaskEntity(context: moc)
+    thirdTask.taskName = "Come"
+    thirdTask.done = true
+    thirdTask.priority = 0
+    thirdTask.dueData = nil
+    
+    let fourthTask = TaskEntity(context: moc)
+    fourthTask.taskName = "leave"
+    fourthTask.done = false
+    fourthTask.priority = 0
+    fourthTask.dueData = nil
+    
     try! moc.save()
   }
 }
