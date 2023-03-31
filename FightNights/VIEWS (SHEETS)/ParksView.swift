@@ -10,54 +10,35 @@ import SwiftUI
 struct ParksView: View {
   //MARK: fetch request
   @Environment(\.managedObjectContext) var context
-  @FetchRequest<ParkEntity>(
-    sortDescriptors: [] ) private var parks
-  
+//  @FetchRequest<ParkEntity>(sortDescriptors: [] ) private var parks
+
   //MARK: state (local)
-  @State private var justCanada = false
+  @State private var parksCount = 0
+  @State private var parkArray: [String] = []
   
     var body: some View {
       NavigationStack {
-        ScrollView {
-          ForEach(parks) { park in
-            HStack {
-              Image(uiImage: park.viewImage)
-                .resizable()
-                .scaledToFit()
-                .frame(height: 60)
-                .cornerRadius(8)
-              
-              VStack(alignment: .leading, spacing: 4) {
-                HStack {
-                  Text(park.viewName)
-                  Spacer()
-                  Image(systemName: park.viewRating)
-                }.font(.title)
-                Text(park.viewLocation).fontWeight(.light)
-              }
-              Spacer()
-            }
-            .padding(.vertical, 8)
-          }//list
-          .navigationTitle("Parks")
-          .toolbar {
-            Button {
-              withAnimation(.easeOut(duration: 0.4)) {
-                justCanada.toggle()
-                parks.nsPredicate = justCanada
-                ? NSPredicate(format: "country_ = 'Canada'")
-                : nil
-              }
-        
-            } label: {
-              Image(systemName: justCanada
-              ? "globe.americas.fill"
-                    : "globe.americas")
+        List {
+          VStack {
+            Text("Parks")
+              .bold().badge(parksCount).font(.title2)
+            Text(parkArray, format: .list(type: .and, width: .standard))
+              .fixedSize(horizontal: false, vertical: true)
+          }
+        }//list
+        .task {
+          let request = ParkEntity.fetchRequest()
+          request.predicate = NSPredicate(format: "country_ CONTAINS %@", "Canada")
+          request.sortDescriptors = [NSSortDescriptor(key: "name_", ascending: true)]
+          if let parks = try? context.fetch(request) {
+            parksCount = parks.count
+            
+            for park in parks {
+              parkArray.append(park.viewName)
             }
           }
-        
-        }.padding(.horizontal)
-
+          
+        }//task
       }//ns
       
     }//body

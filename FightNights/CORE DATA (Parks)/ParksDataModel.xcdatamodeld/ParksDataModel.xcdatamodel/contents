@@ -6,6 +6,9 @@
         <attribute name="name_" optional="YES" attributeType="String"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="region_" optional="YES" attributeType="String"/>
+        <fetchIndex name="CountryIndex">
+            <fetchIndexElement property="country_" type="Binary" order="ascending"/>
+        </fetchIndex>
     </entity>
     <fetchRequest name="FetchRequestForCanada" entity="ParkEntity" predicateString="country_ == &quot;Canada&quot; AND rating &gt; 8"/>
 </model>

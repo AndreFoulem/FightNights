@@ -26,7 +26,7 @@ extension ParkEntity {
 
 //-> FETCH REQUESTS
 extension ParkEntity {
-  static var firstViewRequest: NSFetchRequest<ParkEntity> {
+  static var firstFiveRequest: NSFetchRequest<ParkEntity> {
     let request = ParkEntity.fetchRequest()
     
     request.sortDescriptors = [NSSortDescriptor(keyPath: \ParkEntity.name_, ascending: true)]
