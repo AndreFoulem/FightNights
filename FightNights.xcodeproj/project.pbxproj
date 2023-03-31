@@ -18,6 +18,7 @@
 		901C5FC729C557AB00029C77 /* FightNightsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */; };
 		901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FD829C5596200029C77 /* ContentView_blueprint.swift */; };
 		901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */; };
+		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180829D606D1003F591B /* ParksDataModel.xcdatamodeld */; };
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
@@ -57,6 +58,7 @@
 		901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightNightsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		901C5FD829C5596200029C77 /* ContentView_blueprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_blueprint.swift; sourceTree = "<group>"; };
 		901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence_bluepring.swift; sourceTree = "<group>"; };
+		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				901C5FD529C5586700029C77 /* VIEWS (SHEETS) */,
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				90D3180729D604B2003F591B /* CORE DATA (Parks) */,
+				9021441229D6812C00926E4A /* CORE DATA (Tasks) */,
 				901C5FD429C5585500029C77 /* MODEL */,
 			);
 			path = FightNights;
@@ -182,6 +185,14 @@
 				901C5FAD29C557AB00029C77 /* BookContainer.swift */,
 			);
 			path = "CORE DATA (Books)";
+			sourceTree = "<group>";
+		};
+		9021441229D6812C00926E4A /* CORE DATA (Tasks) */ = {
+			isa = PBXGroup;
+			children = (
+				9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */,
+			);
+			path = "CORE DATA (Tasks)";
 			sourceTree = "<group>";
 		};
 		90D3180729D604B2003F591B /* CORE DATA (Parks) */ = {
@@ -328,6 +339,7 @@
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */,
 				90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */,
+				9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */,
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
 				901C5FA729C557AB00029C77 /* BookView.swift in Sources */,
 				901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */,
@@ -668,6 +680,16 @@
 			);
 			currentVersion = 901C5FB029C557AB00029C77 /* FightNights.xcdatamodel */;
 			path = FightNightsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */,
+			);
+			currentVersion = 9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */;
+			path = TasksDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
