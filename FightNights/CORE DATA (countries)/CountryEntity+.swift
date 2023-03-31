@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 extension CountryEntity {
   
@@ -16,5 +17,4 @@ extension CountryEntity {
   var viewDate: String {
     lastVisited?.formatted(date: .numeric, time: .omitted) ?? ""
   }
-  
 }

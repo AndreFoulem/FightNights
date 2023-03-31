@@ -9,17 +9,24 @@ import Foundation
 import CoreData
 
 public class TaskContainer {
-  let container = NSPersistentContainer(name: "TasksDataModel")
+  let container: NSPersistentContainer
   
   init(forPreview: Bool = false) {
-    if(forPreview) {
-      container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null") }
+    container = NSPersistentContainer(name: "TasksDataModel")
     
+    let context = container.viewContext
+    context.mergePolicy = NSMergePolicy.mergeByPropertyObjectTrump
+    context.undoManager = UndoManager()
+    
+    if(forPreview) {
+      container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
+    }
     container.loadPersistentStores { _, _ in }
-    
     if(forPreview) {
-       TaskContainer.addMockData(moc: container.viewContext) }
+       TaskContainer.addMockData(moc: container.viewContext)
+    }
   }
+  
 }
 
 extension TaskContainer {
