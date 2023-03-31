@@ -24,6 +24,15 @@ public class TaskContainer {
 }
 
 extension TaskContainer {
+  
+  static var preview: NSManagedObjectContext {
+    let previewContainer = NSPersistentContainer(name: "TasksDataModel")
+    previewContainer.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
+    previewContainer.loadPersistentStores { _, _ in }
+    self.addMockData(moc: previewContainer.viewContext)
+    return previewContainer.viewContext
+  }
+  
   static func addMockData(moc: NSManagedObjectContext) {
     let firstTask = TaskEntity(context: moc)
     firstTask.taskName = "Buy stuff"
