@@ -22,6 +22,7 @@
 		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
 		9045722829D72A140055ED3E /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722729D72A140055ED3E /* TasksView.swift */; };
+		9045722B29D731030055ED3E /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722A29D731030055ED3E /* EditTaskView.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180829D606D1003F591B /* ParksDataModel.xcdatamodeld */; };
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
@@ -65,6 +66,7 @@
 		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
 		9045722729D72A140055ED3E /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		9045722A29D731030055ED3E /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
@@ -124,7 +126,8 @@
 				901C5FA829C557AB00029C77 /* Assets.xcassets */,
 				901C5FAA29C557AB00029C77 /* Preview Content */,
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
-				901C5FD529C5586700029C77 /* VIEWS (SHEETS) */,
+				9045722929D730CB0055ED3E /* VIEWS (COMPONENTS) */,
+				901C5FD529C5586700029C77 /* VIEWS (SCREENS) */,
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				90D3180729D604B2003F591B /* CORE DATA (Parks) */,
 				9021441229D6812C00926E4A /* CORE DATA (Tasks) */,
@@ -174,14 +177,14 @@
 			path = MODEL;
 			sourceTree = "<group>";
 		};
-		901C5FD529C5586700029C77 /* VIEWS (SHEETS) */ = {
+		901C5FD529C5586700029C77 /* VIEWS (SCREENS) */ = {
 			isa = PBXGroup;
 			children = (
 				901C5FA629C557AB00029C77 /* BookView.swift */,
 				90D3181229D615D9003F591B /* ParksView.swift */,
 				9045722729D72A140055ED3E /* TasksView.swift */,
 			);
-			path = "VIEWS (SHEETS)";
+			path = "VIEWS (SCREENS)";
 			sourceTree = "<group>";
 		};
 		901C5FD629C5589C00029C77 /* CORE DATA (Books) */ = {
@@ -202,6 +205,14 @@
 				9021441829D684A100926E4A /* TaskContainer.swift */,
 			);
 			path = "CORE DATA (Tasks)";
+			sourceTree = "<group>";
+		};
+		9045722929D730CB0055ED3E /* VIEWS (COMPONENTS) */ = {
+			isa = PBXGroup;
+			children = (
+				9045722A29D731030055ED3E /* EditTaskView.swift */,
+			);
+			path = "VIEWS (COMPONENTS)";
 			sourceTree = "<group>";
 		};
 		90D3180729D604B2003F591B /* CORE DATA (Parks) */ = {
@@ -345,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
+				9045722B29D731030055ED3E /* EditTaskView.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */,
 				90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */,

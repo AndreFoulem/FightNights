@@ -15,17 +15,7 @@ struct TasksView: View {
     var body: some View {
       List {
         ForEach(tasks) { task in
-          Text(task.viewTaskName)
-            .strikethrough(task.done, color: .red)
-            .swipeActions(allowsFullSwipe: true) {
-              Button {
-                task.done.toggle()
-                try? context.save()
-              } label: {
-                Image(systemName: task.done ? "arrow.uturn.backward.square" : "checkmark.square")
-              }
-              .tint(task.done ? .gray : .red)
-            }
+       
         }
       
       }

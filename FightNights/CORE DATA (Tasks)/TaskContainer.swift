@@ -34,27 +34,27 @@ extension TaskContainer {
   
   static func addMockData(moc: NSManagedObjectContext) {
     let firstTask = TaskEntity(context: moc)
-    firstTask.taskName = "Buy stuff"
+    firstTask.taskName = "Meeting"
     firstTask.done = false
-    firstTask.priority = 0
+    firstTask.priority = 1
     firstTask.dueData = nil
     
     let secondTask = TaskEntity(context: moc)
-    secondTask.taskName = "Sell stuff"
+    secondTask.taskName = "Prepare for sale"
     secondTask.done = false
-    secondTask.priority = 0
+    secondTask.priority = 2
     secondTask.dueData = nil
     
     let thirdTask = TaskEntity(context: moc)
-    thirdTask.taskName = "Come"
-    thirdTask.done = true
-    thirdTask.priority = 0
+    thirdTask.taskName = "get gift for anniversary"
+    thirdTask.done = false
+    thirdTask.priority = 3
     thirdTask.dueData = nil
     
     let fourthTask = TaskEntity(context: moc)
-    fourthTask.taskName = "leave"
-    fourthTask.done = false
-    fourthTask.priority = 0
+    fourthTask.taskName = "Get milk"
+    fourthTask.done = true
+    fourthTask.priority = 1
     fourthTask.dueData = nil
     
     try! moc.save()
