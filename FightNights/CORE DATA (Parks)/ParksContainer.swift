@@ -54,43 +54,43 @@ extension ParksContainer {
   
   static func addMockData(moc: NSManagedObjectContext) {
     let firstPark = ParkEntity(context: moc)
-    firstPark.name_ = "White Rock"
-    firstPark.country_ = "Canada"
+    firstPark.name_ = "Grampians"
+    firstPark.country_ = "Australia"
     firstPark.rating = 2
     firstPark.region_ = "BC"
     firstPark.image_ = nil
     
     let secondPark = ParkEntity(context: moc)
-    secondPark.name_ = "Surrey"
+    secondPark.name_ = "Banff"
     secondPark.country_ = "Canada"
     secondPark.rating = 7
     secondPark.region_ = "BC"
     secondPark.image_ = nil
     
     let thirdPark = ParkEntity(context: moc)
-    thirdPark.name_ = "Mexico"
-    thirdPark.country_ = "USA"
+    thirdPark.name_ = "Jasper"
+    thirdPark.country_ = "Canada"
     thirdPark.rating = 8
     thirdPark.region_ = "WE"
     thirdPark.image_ = nil
     
     let fourthPark = ParkEntity(context: moc)
-    fourthPark.name_ = "San Fran"
-    fourthPark.country_ = "USA"
+    fourthPark.name_ = "Bavaria"
+    fourthPark.country_ = "Germany"
     fourthPark.rating = 4
     fourthPark.region_ = "OR"
     fourthPark.image_ = nil
     
-    let fouthPark = ParkEntity(context: moc)
-    fouthPark.name_ = "Jap"
-    fouthPark.country_ = "Japan"
-    fouthPark.rating = 9
-    fouthPark.region_ = "ozaka"
-    fouthPark.image_ = nil
+    let sixPark = ParkEntity(context: moc)
+    sixPark.name_ = "Dolomites"
+    sixPark.country_ = "Italy"
+    sixPark.rating = 9
+    sixPark.region_ = "ozaka"
+    sixPark.image_ = nil
     
     let fifthPark = ParkEntity(context: moc)
-    fifthPark.name_ = "Moscow"
-    fifthPark.country_ = "Russia"
+    fifthPark.name_ = "Rome"
+    fifthPark.country_ = "Italy"
     fifthPark.rating = 4
     fifthPark.region_ = "west"
     fifthPark.image_ = nil
