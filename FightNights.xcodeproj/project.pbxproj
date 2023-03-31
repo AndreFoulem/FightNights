@@ -31,6 +31,7 @@
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
 		90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180D29D60BC2003F591B /* ParksContainer.swift */; };
 		90D3181329D615D9003F591B /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3181229D615D9003F591B /* ParksView.swift */; };
+		90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
 		90D3180D29D60BC2003F591B /* ParksContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksContainer.swift; sourceTree = "<group>"; };
 		90D3181229D615D9003F591B /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
+		90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiresView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				901C5FA629C557AB00029C77 /* BookView.swift */,
 				90D3181229D615D9003F591B /* ParksView.swift */,
 				9045722729D72A140055ED3E /* TasksView.swift */,
+				90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */,
 			);
 			path = "VIEWS (SCREENS)";
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
+				90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */,
 				9045722B29D731030055ED3E /* EditTaskView.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */,

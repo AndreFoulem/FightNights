@@ -26,8 +26,8 @@ struct FightNightsApp: App {
     var body: some Scene {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-            TasksView()
-            .environment(\.managedObjectContext, ParksContainer(forPreview: true).container.viewContext)
+           CountiresView()
+            .environment(\.managedObjectContext, CountriesContainer(forPreview: true).container.viewContext)
         }
     }
 }
