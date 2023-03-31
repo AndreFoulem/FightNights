@@ -32,7 +32,26 @@ struct EditTaskView: View {
         .pickerStyle(.segmented)
       }
     DatePicker("DueDate", selection: $dueDate)
+      Button("Save") {
+        task?.taskName = taskName
+        task?.priority = Int16(priority)
+        task?.dueData = dueDate
+        
+        try? context.save()
+        
+        dismiss()
+      }
+      .buttonStyle(.borderedProminent)
+      .frame(maxWidth: .infinity)
+      Spacer()
+    }//vs
+    .padding()
+    .onAppear {
+      taskName = task?.viewTaskName ?? ""
+      priority = Int(task?.priority ?? 0)
+      dueDate = task?.dueData ?? Date()
     }
+    .navigationTitle("Edit Task")
   }
 }
 

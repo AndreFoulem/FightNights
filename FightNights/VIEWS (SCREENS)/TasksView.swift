@@ -15,7 +15,7 @@ struct TasksView: View {
     var body: some View {
       List {
         ForEach(tasks) { task in
-       
+          
         }
       
       }
