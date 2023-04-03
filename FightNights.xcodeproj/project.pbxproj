@@ -19,6 +19,7 @@
 		901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FD829C5596200029C77 /* ContentView_blueprint.swift */; };
 		901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */; };
 		901E5FF829DB389800655A2D /* AutosDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 901E5FF629DB389800655A2D /* AutosDataModel.xcdatamodeld */; };
+		901E5FFA29DB39C000655A2D /* AutosContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901E5FF929DB39C000655A2D /* AutosContainer.swift */; };
 		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
 		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
@@ -68,6 +69,7 @@
 		901C5FD829C5596200029C77 /* ContentView_blueprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_blueprint.swift; sourceTree = "<group>"; };
 		901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence_bluepring.swift; sourceTree = "<group>"; };
 		901E5FF729DB389800655A2D /* AutosDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutosDataModel.xcdatamodel; sourceTree = "<group>"; };
+		901E5FF929DB39C000655A2D /* AutosContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosContainer.swift; sourceTree = "<group>"; };
 		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				901E5FF629DB389800655A2D /* AutosDataModel.xcdatamodeld */,
+				901E5FF929DB39C000655A2D /* AutosContainer.swift */,
 			);
 			path = "CORE DATA (Autos)";
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */,
 				9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */,
 				9021441929D684A100926E4A /* TaskContainer.swift in Sources */,
+				901E5FFA29DB39C000655A2D /* AutosContainer.swift in Sources */,
 				90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
