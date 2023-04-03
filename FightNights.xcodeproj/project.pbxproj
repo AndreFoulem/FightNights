@@ -18,6 +18,7 @@
 		901C5FC729C557AB00029C77 /* FightNightsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */; };
 		901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FD829C5596200029C77 /* ContentView_blueprint.swift */; };
 		901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */; };
+		901E5FF829DB389800655A2D /* AutosDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 901E5FF629DB389800655A2D /* AutosDataModel.xcdatamodeld */; };
 		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
 		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
@@ -66,6 +67,7 @@
 		901C5FC629C557AB00029C77 /* FightNightsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightNightsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		901C5FD829C5596200029C77 /* ContentView_blueprint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView_blueprint.swift; sourceTree = "<group>"; };
 		901C5FDA29C5598D00029C77 /* Persistence_bluepring.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence_bluepring.swift; sourceTree = "<group>"; };
+		901E5FF729DB389800655A2D /* AutosDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AutosDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
@@ -136,10 +138,10 @@
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
 				9045722929D730CB0055ED3E /* VIEWS (COMPONENTS) */,
 				901C5FD529C5586700029C77 /* VIEWS (SCREENS) */,
+				90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */,
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				9045722C29D772FD0055ED3E /* CORE DATA (countries) */,
 				90D3180729D604B2003F591B /* CORE DATA (Parks) */,
-				90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */,
 				9021441229D6812C00926E4A /* CORE DATA (Tasks) */,
 				901C5FD429C5585500029C77 /* MODEL */,
 			);
@@ -249,6 +251,7 @@
 		90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */ = {
 			isa = PBXGroup;
 			children = (
+				901E5FF629DB389800655A2D /* AutosDataModel.xcdatamodeld */,
 			);
 			path = "CORE DATA (Autos)";
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			files = (
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */,
+				901E5FF829DB389800655A2D /* AutosDataModel.xcdatamodeld in Sources */,
 				9045722B29D731030055ED3E /* EditTaskView.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
 				90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */,
@@ -736,6 +740,16 @@
 			);
 			currentVersion = 901C5FB029C557AB00029C77 /* FightNights.xcdatamodel */;
 			path = FightNightsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		901E5FF629DB389800655A2D /* AutosDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				901E5FF729DB389800655A2D /* AutosDataModel.xcdatamodel */,
+			);
+			currentVersion = 901E5FF729DB389800655A2D /* AutosDataModel.xcdatamodel */;
+			path = AutosDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
