@@ -27,6 +27,7 @@
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
 		90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90271CE829DCFA13002DB4CF /* AutosParentChild.swift */; };
 		90271CEE29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90271CEC29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld */; };
+		902A978229DD044E005D2FAA /* SchoolsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A978129DD044E005D2FAA /* SchoolsContainer.swift */; };
 		9045722829D72A140055ED3E /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722729D72A140055ED3E /* TasksView.swift */; };
 		9045722B29D731030055ED3E /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722A29D731030055ED3E /* EditTaskView.swift */; };
 		9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9045722D29D773370055ED3E /* CountriesDataModel.xcdatamodeld */; };
@@ -81,6 +82,7 @@
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
 		90271CE829DCFA13002DB4CF /* AutosParentChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosParentChild.swift; sourceTree = "<group>"; };
 		90271CED29DD037E002DB4CF /* SchoolsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SchoolsDataModel.xcdatamodel; sourceTree = "<group>"; };
+		902A978129DD044E005D2FAA /* SchoolsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsContainer.swift; sourceTree = "<group>"; };
 		9045722729D72A140055ED3E /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		9045722A29D731030055ED3E /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		9045722E29D773370055ED3E /* CountriesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountriesDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				90271CEC29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld */,
+				902A978129DD044E005D2FAA /* SchoolsContainer.swift */,
 			);
 			path = "CORE DATA (Schools)";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
 				901E5FFE29DB413600655A2D /* ManufacturerEntity+.swift in Sources */,
 				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,
+				902A978229DD044E005D2FAA /* SchoolsContainer.swift in Sources */,
 				9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */,
 				9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */,
 				9021441929D684A100926E4A /* TaskContainer.swift in Sources */,
