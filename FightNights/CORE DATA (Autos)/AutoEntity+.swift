@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+extension AutoEntity {
+  var viewModel: String {
+    return model ?? "N/A"
+  }
+  var viewYear: String {
+    return year ?? "N/A"
+  }
+}

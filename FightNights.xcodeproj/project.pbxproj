@@ -25,6 +25,7 @@
 		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
 		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
+		90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90271CE829DCFA13002DB4CF /* AutosParentChild.swift */; };
 		9045722829D72A140055ED3E /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722729D72A140055ED3E /* TasksView.swift */; };
 		9045722B29D731030055ED3E /* EditTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045722A29D731030055ED3E /* EditTaskView.swift */; };
 		9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9045722D29D773370055ED3E /* CountriesDataModel.xcdatamodeld */; };
@@ -77,6 +78,7 @@
 		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
+		90271CE829DCFA13002DB4CF /* AutosParentChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosParentChild.swift; sourceTree = "<group>"; };
 		9045722729D72A140055ED3E /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		9045722A29D731030055ED3E /* EditTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskView.swift; sourceTree = "<group>"; };
 		9045722E29D773370055ED3E /* CountriesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountriesDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				90D3181229D615D9003F591B /* ParksView.swift */,
 				9045722729D72A140055ED3E /* TasksView.swift */,
 				90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */,
+				90271CE829DCFA13002DB4CF /* AutosParentChild.swift */,
 			);
 			path = "VIEWS (SCREENS)";
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 			files = (
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */,
+				90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */,
 				901E5FF829DB389800655A2D /* AutosDataModel.xcdatamodeld in Sources */,
 				9045722B29D731030055ED3E /* EditTaskView.swift in Sources */,
 				901C5FDB29C5598D00029C77 /* Persistence_bluepring.swift in Sources */,
