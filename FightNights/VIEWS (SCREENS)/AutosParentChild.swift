@@ -15,18 +15,15 @@ struct AutosParentChild: View {
     var body: some View {
       NavigationStack {
         List(manufacturers) { manufacturer in
-          
-          NavigationLink {
-            
-            List(manufacturer.viewAutoEntities) { auto in
-              Text(auto.model ?? "")
+            Section {
+                  ForEach(manufacturer.viewAutoEntities) { auto in
+                    Text(auto.viewModel)
+                  }
+            } header: {
+                  Text(manufacturer.viewName)
             }
-            
-          } label: {
-            Text(manufacturer.name ?? "")
-          }//nl
-
         }//list
+        .navigationTitle("Nested")
       }//ns
       
     }//body
