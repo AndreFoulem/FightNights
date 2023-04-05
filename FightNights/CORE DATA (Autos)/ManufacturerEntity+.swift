@@ -18,6 +18,9 @@ extension ManufacturerEntity {
   
   var viewAutoEntities: [AutoEntity] {
     // convert NSSET to an array
-    return autoEntity?.allObjects as? [AutoEntity] ?? []
+    return autoEntity?.array as? [AutoEntity] ?? []
   }
 }
+
+//-> NSSet for relationship => entityName has .allObjects property
+//-> NSOrderedSet has an .array as a property

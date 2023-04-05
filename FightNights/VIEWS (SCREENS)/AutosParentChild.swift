@@ -9,21 +9,26 @@ import SwiftUI
 import CoreData
 
 struct AutosParentChild: View {
-  @FetchRequest<ManufacturerEntity>(sortDescriptors: [])
-  private var manufacturers
+  @SectionedFetchRequest<String?, AutoEntity>(
+    sectionIdentifier: \.manufacturerEntity?.name,
+    sortDescriptors: [SortDescriptor(\.manufacturerEntity?.name)] )
+  private var autos
   
     var body: some View {
       NavigationStack {
-        List(manufacturers) { manufacturer in
-            Section {
-                  ForEach(manufacturer.viewAutoEntities) { auto in
-                    Text(auto.viewModel)
-                  }
-            } header: {
-                  Text(manufacturer.viewName)
+        List(autos) { section in
+          Section {
+            ForEach(section){ auto in
+              Text(auto.viewModel)
             }
+          } header: {
+            Text(section.id!)
+            // Section id represent the section Identifier you set in the fetch
+          }
+            
         }//list
         .navigationTitle("Nested")
+        .headerProminence(.increased)
       }//ns
       
     }//body
