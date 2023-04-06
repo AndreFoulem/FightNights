@@ -3,7 +3,7 @@
     <entity name="AutoEntity" representedClassName="AutoEntity" syncable="YES" codeGenerationType="class">
         <attribute name="model" optional="YES" attributeType="String"/>
         <attribute name="year" optional="YES" attributeType="String"/>
-        <relationship name="manufacturerEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ManufacturerEntity" inverseName="autoEntity" inverseEntity="ManufacturerEntity"/>
+        <relationship name="manufacturerEntity" maxCount="1" deletionRule="Nullify" destinationEntity="ManufacturerEntity" inverseName="autoEntity" inverseEntity="ManufacturerEntity"/>
     </entity>
     <entity name="ManufacturerEntity" representedClassName="ManufacturerEntity" syncable="YES" codeGenerationType="class">
         <attribute name="country" optional="YES" attributeType="String"/>

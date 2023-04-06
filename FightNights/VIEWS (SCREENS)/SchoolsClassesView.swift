@@ -15,11 +15,12 @@ struct SchoolsClassesView: View {
       NavigationStack {
         List(students) { student in
           NavigationLink {
-            
+            ClassView(student: student)
           } label : {
             Text(student.name ?? "")
           }
-        }
+        }//list
+        .navigationTitle("Title")
       }
     }
 }
