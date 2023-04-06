@@ -12,8 +12,14 @@ struct SchoolsClassesView: View {
     @FetchRequest<StudentEntity>(sortDescriptors: []) private var students
   
     var body: some View {
-      List(students) { student in
-        
+      NavigationStack {
+        List(students) { student in
+          NavigationLink {
+            
+          } label : {
+            Text(student.name ?? "")
+          }
+        }
       }
     }
 }

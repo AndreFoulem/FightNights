@@ -35,6 +35,7 @@
 		9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723229D774E10055ED3E /* CountriesContainer.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */; };
+		90BE96A529DE500200DA409D /* StudentEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A429DE500200DA409D /* StudentEntity+.swift */; };
 		90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180829D606D1003F591B /* ParksDataModel.xcdatamodeld */; };
 		90D3180C29D60787003F591B /* ParkEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180B29D60787003F591B /* ParkEntity+.swift */; };
 		90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180D29D60BC2003F591B /* ParksContainer.swift */; };
@@ -91,6 +92,7 @@
 		9045723229D774E10055ED3E /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsClassesView.swift; sourceTree = "<group>"; };
+		90BE96A429DE500200DA409D /* StudentEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentEntity+.swift"; sourceTree = "<group>"; };
 		90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90D3180B29D60787003F591B /* ParkEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParkEntity+.swift"; sourceTree = "<group>"; };
 		90D3180D29D60BC2003F591B /* ParksContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksContainer.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				90271CEC29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld */,
 				902A978129DD044E005D2FAA /* SchoolsContainer.swift */,
+				90BE96A429DE500200DA409D /* StudentEntity+.swift */,
 			);
 			path = "CORE DATA (Schools)";
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				901E5FFC29DB412A00655A2D /* AutoEntity+.swift in Sources */,
 				9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */,
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
+				90BE96A529DE500200DA409D /* StudentEntity+.swift in Sources */,
 				901C5FA729C557AB00029C77 /* BookView.swift in Sources */,
 				901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */,
 				90D3181329D615D9003F591B /* ParksView.swift in Sources */,

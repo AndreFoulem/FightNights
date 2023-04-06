@@ -42,7 +42,23 @@ extension SchoolsContainer {
   }
   
   static func addMockData(moc: NSManagedObjectContext) {
+     let s1 = StudentEntity(context: moc)
+     s1.name = "Andre"
+     s1.image = nil
+  
+     let s1s2 = StudentEntity(context: moc)
+     s1s2.name = "Andre"
+     s1s2.image = nil
     
+    let s3 = StudentEntity(context: moc)
+     s3.name = "Andre"
+     s3.image = nil
+    
+    let s1s = StudentEntity(context: moc)
+     s1s.name = "Andre"
+     s1s.image = nil
+    
+    try? moc.save()
   }
   
 }
