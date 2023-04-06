@@ -3,11 +3,11 @@
     <entity name="ClassEntity" representedClassName="ClassEntity" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="subject" optional="YES" attributeType="String"/>
-        <relationship name="students" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudentEntity" inverseName="classes" inverseEntity="StudentEntity"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StudentEntity" inverseName="classes" inverseEntity="StudentEntity"/>
     </entity>
     <entity name="StudentEntity" representedClassName="StudentEntity" syncable="YES" codeGenerationType="class">
         <attribute name="image" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="classes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClassEntity" inverseName="students" inverseEntity="ClassEntity"/>
+        <relationship name="classes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ClassEntity" inverseName="students" inverseEntity="ClassEntity"/>
     </entity>
 </model>
