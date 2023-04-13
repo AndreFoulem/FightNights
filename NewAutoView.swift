@@ -9,8 +9,14 @@ import SwiftUI
 
 struct NewAutoView: View {
    var manufacturerEntity: ManufacturerEntity
+  @Environment(\.managedObjectContext) private var context
+  @Environment(\.dismiss) var dismiss
+  
 
     var body: some View {
+      VStack(spacing: 15) {
+        
+      }
     }
 }
 
