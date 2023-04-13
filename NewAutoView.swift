@@ -11,6 +11,8 @@ struct NewAutoView: View {
    var manufacturerEntity: ManufacturerEntity
   @Environment(\.managedObjectContext) private var context
   @Environment(\.dismiss) var dismiss
+  @State private var modelYear = ""
+  @State private var modelName = ""
   
 
     var body: some View {
@@ -20,8 +22,4 @@ struct NewAutoView: View {
     }
 }
 
-struct NewAutoView_Previews: PreviewProvider {
-    static var previews: some View {
-        NewAutoView()
-    }
-}
+
