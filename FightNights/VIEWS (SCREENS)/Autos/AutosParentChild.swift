@@ -11,31 +11,33 @@ import CoreData
 struct AutosParentChild: View {
     @FetchRequest<ManufacturerEntity>(sortDescriptors: [])
     private var manufacturers
-    @State private var newManufacturer = false
+  @State private var newAuto = false
+  @State private var selectedManufacturer: ManufacturerEntity?
   
     var body: some View {
       NavigationStack {
         List(manufacturers) { manufacturer in
           Section {
               ForEach(manufacturer.viewAutoEntities) { auto in
-                Text(auto.viewModel)
+                Text("\(auto.viewYear) \(auto.viewModel)")
               }
           } header: {
-            Text(manufacturer.viewName)
+            HStack {
+              Text(manufacturer.viewName)
+              Spacer()
+              Button {
+                selectedManufacturer = manufacturer
+                newAuto.toggle()
+              } label: {
+                Image(systemName: "plus.circle")
+              }
+            }
           }
         }//list
         .navigationTitle("Inserting a Parent")
-        .toolbar {
-          ToolbarItem {
-            Button {
-              newManufacturer.toggle()
-            } label: {
-              Image(systemName: "plus")
-            }
-          }
-        }
-        .sheet(isPresented: $newManufacturer) {
-          NewManufacturer()
+        .sheet(isPresented: $selectedManufacturer) { manufacturer in
+          NewAutoView(manufacturerEntity: manufacturer)
+            .presentationDetents([.medium])
         }
         
       }//ns
