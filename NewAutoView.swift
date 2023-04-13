@@ -17,9 +17,33 @@ struct NewAutoView: View {
 
     var body: some View {
       VStack(spacing: 15) {
+        Text("New Automobile")
+          .font(.largeTitle.weight(.bold))
+        HStack {
+          TextField("year", text: $modelYear).frame(width: 100)
+          TextField("model", text: $modelName)
+        }
+        .textFieldStyle(.roundedBorder)
         
+        
+        Button("Save") {
+          let auto = AutoEntity(context: context)
+          auto.year = modelYear
+          auto.model = modelName
+          manufacturerEntity.addToAutoEntity(auto)
+          do {
+            try context.save()
+            dismiss()
+          } catch {
+            print(error.localizedDescription)
+          }
+        }
+        .buttonStyle(.borderedProminent)
+        Spacer()
       }
+      .padding()
     }
+   
 }
 
 

@@ -35,7 +35,7 @@ struct AutosParentChild: View {
           }
         }//list
         .navigationTitle("Inserting a Parent")
-        .sheet(isPresented: $selectedManufacturer) { manufacturer in
+        .sheet(item: $selectedManufacturer) { manufacturer in
           NewAutoView(manufacturerEntity: manufacturer)
             .presentationDetents([.medium])
         }
