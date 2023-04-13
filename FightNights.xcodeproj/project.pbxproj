@@ -34,6 +34,7 @@
 		9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723029D7738F0055ED3E /* CountryEntity+.swift */; };
 		9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723229D774E10055ED3E /* CountriesContainer.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
+		909E1EAD29E8A63000A12C53 /* NewAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E1EAC29E8A63000A12C53 /* NewAutoView.swift */; };
 		90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */; };
 		90BE96A529DE500200DA409D /* StudentEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A429DE500200DA409D /* StudentEntity+.swift */; };
 		90BE96A829DE523800DA409D /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A729DE523800DA409D /* StockView.swift */; };
@@ -94,6 +95,7 @@
 		9045723029D7738F0055ED3E /* CountryEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryEntity+.swift"; sourceTree = "<group>"; };
 		9045723229D774E10055ED3E /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
+		909E1EAC29E8A63000A12C53 /* NewAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAutoView.swift; sourceTree = "<group>"; };
 		90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsClassesView.swift; sourceTree = "<group>"; };
 		90BE96A429DE500200DA409D /* StudentEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentEntity+.swift"; sourceTree = "<group>"; };
 		90BE96A729DE523800DA409D /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		901C5F9829C557AA00029C77 = {
 			isa = PBXGroup;
 			children = (
+				909E1EAC29E8A63000A12C53 /* NewAutoView.swift */,
 				901C5FD329C557C200029C77 /* __SCRATCH_PAD__ */,
 				901C5FB929C557AB00029C77 /* FightNightsTests */,
 				901C5FC329C557AB00029C77 /* FightNightsUITests */,
@@ -462,6 +465,7 @@
 				901E5FFE29DB413600655A2D /* ManufacturerEntity+.swift in Sources */,
 				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,
 				902A978229DD044E005D2FAA /* SchoolsContainer.swift in Sources */,
+				909E1EAD29E8A63000A12C53 /* NewAutoView.swift in Sources */,
 				9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */,
 				9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */,
 				9021441929D684A100926E4A /* TaskContainer.swift in Sources */,
