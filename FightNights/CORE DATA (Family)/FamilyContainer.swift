@@ -9,7 +9,10 @@ import CoreData
 
 final class FamilyContainer {
   
-  let containter: NSPersistentContainer
+  let container: NSPersistentContainer
   
+  init(forPreview: Bool = false) {
+    container = NSPersistentContainer(name: "FamilyDataModel")
+  }
   
 }
