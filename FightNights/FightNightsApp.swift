@@ -20,7 +20,7 @@ struct FightNightsApp: App {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
           AutosParentChild()
-            .environment(\.managedObjectContext, AutosContainer(forPreview: false).container.viewContext)
+            .environment(\.managedObjectContext, AutosContainer(forPreview: true).container.viewContext)
         }
     }
 }
