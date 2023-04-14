@@ -31,6 +31,14 @@ final class FamilyContainer {
 
 extension FamilyContainer {
   
+  static var preview: NSManagedObjectContext {
+    let container = NSPersistentContainer(name: "FamilyDataModel")
+    container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
+    container.loadPersistentStores { _, _ in }
+    Self.addMockData(moc: container.viewContext)
+    return container.viewContext
+  }
+  
   static func addMockData(moc: NSManagedObjectContext) {
     let member1 = FamilyMemberEntity(context: moc)
     member1.name = "Father Steve"
