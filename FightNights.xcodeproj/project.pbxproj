@@ -45,6 +45,7 @@
 		90D3181329D615D9003F591B /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3181229D615D9003F591B /* ParksView.swift */; };
 		90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */; };
 		90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */; };
+		90E3766029E9B9FB00115E5D /* FamilyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */; };
 		90FE576E29DE589300A2CF24 /* NewManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE576D29DE589300A2CF24 /* NewManufacturer.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		90D3181229D615D9003F591B /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
 		90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiresView.swift; sourceTree = "<group>"; };
 		90E3765D29E9B90D00115E5D /* FamilyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyDataModel.xcdatamodel; sourceTree = "<group>"; };
+		90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyContainer.swift; sourceTree = "<group>"; };
 		90FE576D29DE589300A2CF24 /* NewManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewManufacturer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */,
+				90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */,
 			);
 			path = "CORE DATA (Family)";
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */,
 				9045722829D72A140055ED3E /* TasksView.swift in Sources */,
 				90271CEE29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld in Sources */,
+				90E3766029E9B9FB00115E5D /* FamilyContainer.swift in Sources */,
 				9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */,
 				901E5FFC29DB412A00655A2D /* AutoEntity+.swift in Sources */,
 				9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */,
