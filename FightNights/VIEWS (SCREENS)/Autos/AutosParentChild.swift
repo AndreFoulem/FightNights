@@ -12,21 +12,25 @@ struct AutosParentChild: View {
    @Environment(\.managedObjectContext) private var context
     @FetchRequest<ManufacturerEntity>(sortDescriptors: [])
     private var manufacturers
-    @FetchRequest<AutoEntity>(sortDescriptors: [])
-    private var autos
+
   
     var body: some View {
       NavigationStack {
         VStack(spacing: 0) {
-          List {
-            ForEach(manufacturers) { manufacturer in
+          List(manufacturers) { manufacturer in
+            Section {
+              ForEach(manufacturer.viewAutoEntities) { auto in
+                Text(auto.viewModel)
+              }
+              .onDelete { indexSet in
+                for index in indexSet {
+                  manufacturer.removeFromAutoEntity(at: index)
+                }
+              }
+            } header: {
               Text(manufacturer.viewName)
             }
-            .onDelete(perform: deleteTask)
-          }
-          
-          List(autos) { auto in
-            Text("\(auto.viewModel)")
+            
           }
         }
         
@@ -40,7 +44,12 @@ extension AutosParentChild {
     for offset in offsets {
       context.delete(manufacturers[offset])
     }
-    try! context.save()
+    do {
+      try context.save()
+    } catch {
+      print(error.localizedDescription)
+      context.undo()
+    }
   }
 }
 
