@@ -44,6 +44,7 @@
 		90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180D29D60BC2003F591B /* ParksContainer.swift */; };
 		90D3181329D615D9003F591B /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3181229D615D9003F591B /* ParksView.swift */; };
 		90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */; };
+		90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */; };
 		90FE576E29DE589300A2CF24 /* NewManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE576D29DE589300A2CF24 /* NewManufacturer.swift */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		90D3180D29D60BC2003F591B /* ParksContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksContainer.swift; sourceTree = "<group>"; };
 		90D3181229D615D9003F591B /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
 		90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiresView.swift; sourceTree = "<group>"; };
+		90E3765D29E9B90D00115E5D /* FamilyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90FE576D29DE589300A2CF24 /* NewManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewManufacturer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 				9045722929D730CB0055ED3E /* VIEWS (COMPONENTS) */,
 				901C5FD529C5586700029C77 /* VIEWS (SCREENS) */,
 				90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */,
+				90E3765B29E9B8E700115E5D /* CORE DATA (Family) */,
 				90271CEA29DD0352002DB4CF /* CORE DATA (Schools) */,
 				901C5FD629C5589C00029C77 /* CORE DATA (Books) */,
 				9045722C29D772FD0055ED3E /* CORE DATA (countries) */,
@@ -306,6 +309,14 @@
 				901E5FFD29DB413600655A2D /* ManufacturerEntity+.swift */,
 			);
 			path = "CORE DATA (Autos)";
+			sourceTree = "<group>";
+		};
+		90E3765B29E9B8E700115E5D /* CORE DATA (Family) */ = {
+			isa = PBXGroup;
+			children = (
+				90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */,
+			);
+			path = "CORE DATA (Family)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +472,7 @@
 				90BE96AA29DE52EF00DA409D /* ClassView.swift in Sources */,
 				90D3181329D615D9003F591B /* ParksView.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
+				90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
 				901E5FFE29DB413600655A2D /* ManufacturerEntity+.swift in Sources */,
 				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,
@@ -854,6 +866,16 @@
 			);
 			currentVersion = 90D3180929D606D1003F591B /* ParksDataModel.xcdatamodel */;
 			path = ParksDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				90E3765D29E9B90D00115E5D /* FamilyDataModel.xcdatamodel */,
+			);
+			currentVersion = 90E3765D29E9B90D00115E5D /* FamilyDataModel.xcdatamodel */;
+			path = FamilyDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
