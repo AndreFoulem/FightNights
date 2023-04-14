@@ -5,7 +5,8 @@
 //  Created by AndreMacBook on 2023-04-03.
 //
 
-import Foundation
+import CoreData
+
 
 extension AutoEntity {
   var viewModel: String {
@@ -14,4 +15,5 @@ extension AutoEntity {
   var viewYear: String {
     return year ?? "N/A"
   }
+  
 }

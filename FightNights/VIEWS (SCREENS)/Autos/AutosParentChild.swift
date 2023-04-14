@@ -9,40 +9,39 @@ import SwiftUI
 import CoreData
 
 struct AutosParentChild: View {
+   @Environment(\.managedObjectContext) private var context
     @FetchRequest<ManufacturerEntity>(sortDescriptors: [])
     private var manufacturers
-  @State private var newAuto = false
-  @State private var selectedManufacturer: ManufacturerEntity?
+    @FetchRequest<AutoEntity>(sortDescriptors: [])
+    private var autos
   
     var body: some View {
       NavigationStack {
-        List(manufacturers) { manufacturer in
-          Section {
-              ForEach(manufacturer.viewAutoEntities) { auto in
-                Text("\(auto.viewYear) \(auto.viewModel)")
-              }
-          } header: {
-            HStack {
+        VStack(spacing: 0) {
+          List {
+            ForEach(manufacturers) { manufacturer in
               Text(manufacturer.viewName)
-              Spacer()
-              Button {
-                selectedManufacturer = manufacturer
-                newAuto.toggle()
-              } label: {
-                Image(systemName: "plus.circle")
-              }
             }
+            .onDelete(perform: deleteTask)
           }
-        }//list
-        .navigationTitle("Inserting a Parent")
-        .sheet(item: $selectedManufacturer) { manufacturer in
-          NewAutoView(manufacturerEntity: manufacturer)
-            .presentationDetents([.medium])
+          
+          List(autos) { auto in
+            Text("\(auto.viewModel)")
+          }
         }
         
       }//ns
       
     }//body
+}
+
+extension AutosParentChild {
+  private func deleteTask(offsets: IndexSet) {
+    for offset in offsets {
+      context.delete(manufacturers[offset])
+    }
+    try! context.save()
+  }
 }
 
 struct AutosParentChild_Previews: PreviewProvider {
