@@ -2,5 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FamilyMemberEntity" representedClassName="FamilyMemberEntity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="FamilyMemberEntity" inverseName="parent" inverseEntity="FamilyMemberEntity"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyMemberEntity" inverseName="children" inverseEntity="FamilyMemberEntity"/>
     </entity>
 </model>
