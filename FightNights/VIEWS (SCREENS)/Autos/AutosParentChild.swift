@@ -20,13 +20,18 @@ struct AutosParentChild: View {
           List(manufacturers) { manufacturer in
             Section {
               ForEach(manufacturer.viewAutoEntities) { auto in
-                Text(auto.viewModel)
-              }
-              .onDelete { indexSet in
-                for index in indexSet {
-                  manufacturer.removeFromAutoEntity(at: index)
+                HStack {
+                  Text(auto.viewModel)
+                  Spacer()
+                  Button(role: .destructive) {
+                    manufacturer.removeFromAutoEntity(auto)
+                    try! context.save()
+                  } label: {
+                    Image(systemName: "trash")
+                  }
                 }
               }
+              
             } header: {
               Text(manufacturer.viewName)
             }
