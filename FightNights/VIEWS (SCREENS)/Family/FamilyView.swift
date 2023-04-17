@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct FamilyView: View {
+    @FetchRequest<FamilyMemberEntity>(sortDescriptors: [], predicate: NSPredicate(format: "children.@count > 0") )
+    private var familyMembers
+  
     var body: some View {
-        Text("")
+      ScrollView {
+        OutlineGroup(Array(familyMembers), children: \.children) { familyMember in
+          Text(familyMember.viewName)
+        }
+        .padding()
+      }
     }
 }
 
