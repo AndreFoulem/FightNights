@@ -13,7 +13,7 @@ struct FamilyView: View {
   
     var body: some View {
       ScrollView {
-        OutlineGroup(Array(familyMembers), children: \.children) { familyMember in
+        OutlineGroup(Array(familyMembers), children: \.viewChildren) { familyMember in
           Text(familyMember.viewName)
         }
         .padding()
@@ -24,5 +24,6 @@ struct FamilyView: View {
 struct FamilyView_Previews: PreviewProvider {
     static var previews: some View {
         FamilyView()
+        .environment(\.managedObjectContext, FamilyContainer.preview)
     }
 }
