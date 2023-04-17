@@ -13,4 +13,11 @@ extension FamilyMemberEntity {
     return name ?? "N/A"
   }
   
+  var viewChildren: [FamilyMemberEntity]? {
+    if let children, children.count > 0 {
+      return children.allObjects as? [FamilyMemberEntity]
+    }
+    return nil
+  }
+  
 }
