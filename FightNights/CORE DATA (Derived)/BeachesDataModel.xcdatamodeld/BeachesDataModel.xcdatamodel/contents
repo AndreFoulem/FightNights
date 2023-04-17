@@ -3,9 +3,17 @@
     <entity name="BeachEntity" representedClassName="BeachEntity" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="place" optional="YES" attributeType="String"/>
-        <attribute name="placeCanonical" optional="YES" attributeType="String"/>
-        <attribute name="placeLowercase" optional="YES" attributeType="String"/>
-        <attribute name="placeUppercase" optional="YES" attributeType="String"/>
+        <attribute name="placeCanonical" optional="YES" attributeType="String" derived="YES" derivationExpression="canonical:(place)"/>
+        <attribute name="placeLowercase" optional="YES" attributeType="String" derived="YES" derivationExpression="lowercase:(place)"/>
+        <attribute name="placeUppercase" optional="YES" attributeType="String" derived="YES" derivationExpression="uppercase:(place)"/>
         <attribute name="rating" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="nationEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NationEntity" inverseName="beachEntity" inverseEntity="NationEntity"/>
+    </entity>
+    <entity name="NationEntity" representedClassName="NationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="beachCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="ratingSum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="beachEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BeachEntity" inverseName="nationEntity" inverseEntity="BeachEntity"/>
     </entity>
 </model>
