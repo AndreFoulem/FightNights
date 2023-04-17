@@ -25,6 +25,8 @@
 		9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9021441329D6814E00926E4A /* TasksDataModel.xcdatamodeld */; };
 		9021441729D682C000926E4A /* TaskEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441629D682C000926E4A /* TaskEntity+.swift */; };
 		9021441929D684A100926E4A /* TaskContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9021441829D684A100926E4A /* TaskContainer.swift */; };
+		9022BB6F29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9022BB6E29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift */; };
+		9022BB7229E9C651007CE9C3 /* FamilyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9022BB7129E9C651007CE9C3 /* FamilyView.swift */; };
 		90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90271CE829DCFA13002DB4CF /* AutosParentChild.swift */; };
 		90271CEE29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90271CEC29DD037E002DB4CF /* SchoolsDataModel.xcdatamodeld */; };
 		902A978229DD044E005D2FAA /* SchoolsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A978129DD044E005D2FAA /* SchoolsContainer.swift */; };
@@ -88,6 +90,8 @@
 		9021441429D6814E00926E4A /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9021441629D682C000926E4A /* TaskEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskEntity+.swift"; sourceTree = "<group>"; };
 		9021441829D684A100926E4A /* TaskContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskContainer.swift; sourceTree = "<group>"; };
+		9022BB6E29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamilyMemberEntity+.swift"; sourceTree = "<group>"; };
+		9022BB7129E9C651007CE9C3 /* FamilyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyView.swift; sourceTree = "<group>"; };
 		90271CE829DCFA13002DB4CF /* AutosParentChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutosParentChild.swift; sourceTree = "<group>"; };
 		90271CED29DD037E002DB4CF /* SchoolsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SchoolsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		902A978129DD044E005D2FAA /* SchoolsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsContainer.swift; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 		901C5FD529C5586700029C77 /* VIEWS (SCREENS) */ = {
 			isa = PBXGroup;
 			children = (
+				9022BB7029E9C63D007CE9C3 /* Family */,
 				90BE96AB29DE57F400DA409D /* Autos */,
 				901C5FA629C557AB00029C77 /* BookView.swift */,
 				90D3181229D615D9003F591B /* ParksView.swift */,
@@ -253,6 +258,14 @@
 				9021441829D684A100926E4A /* TaskContainer.swift */,
 			);
 			path = "CORE DATA (Tasks)";
+			sourceTree = "<group>";
+		};
+		9022BB7029E9C63D007CE9C3 /* Family */ = {
+			isa = PBXGroup;
+			children = (
+				9022BB7129E9C651007CE9C3 /* FamilyView.swift */,
+			);
+			path = Family;
 			sourceTree = "<group>";
 		};
 		90271CEA29DD0352002DB4CF /* CORE DATA (Schools) */ = {
@@ -318,6 +331,7 @@
 			children = (
 				90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */,
 				90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */,
+				9022BB6E29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift */,
 			);
 			path = "CORE DATA (Family)";
 			sourceTree = "<group>";
@@ -452,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9022BB6F29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift in Sources */,
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */,
 				90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */,
@@ -467,6 +482,7 @@
 				90E3766029E9B9FB00115E5D /* FamilyContainer.swift in Sources */,
 				9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */,
 				901E5FFC29DB412A00655A2D /* AutoEntity+.swift in Sources */,
+				9022BB7229E9C651007CE9C3 /* FamilyView.swift in Sources */,
 				9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */,
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
 				90BE96A829DE523800DA409D /* StockView.swift in Sources */,

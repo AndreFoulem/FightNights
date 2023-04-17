@@ -40,10 +40,10 @@ extension FamilyContainer {
   }
   
   static func addMockData(moc: NSManagedObjectContext) {
-    let member1 = FamilyMemberEntity(context: moc)
-    member1.name = "Father Steve"
-    let member2 = FamilyMemberEntity(context: moc)
-    member2.name = "Mother Elisa"
+    let parent1 = FamilyMemberEntity(context: moc)
+    parent1.name = "Father Steve"
+    let parent2 = FamilyMemberEntity(context: moc)
+    parent2.name = "Mother Elisa"
     let member3 = FamilyMemberEntity(context: moc)
     member3.name = "Andre"
     let member4 = FamilyMemberEntity(context: moc)
@@ -51,9 +51,12 @@ extension FamilyContainer {
     let member5 = FamilyMemberEntity(context: moc)
     member5.name = "Pat"
     let member6 = FamilyMemberEntity(context: moc)
-    member6.name = "Pat"
+    member6.name = "jim"
     let member7 = FamilyMemberEntity(context: moc)
-    member7.name = "Pat"
+    member7.name = "jolly"
+    
+    parent1.children = [member3, member4]
+    parent2.children = [member5, member6, member7]
     
     try! moc.save()
     
