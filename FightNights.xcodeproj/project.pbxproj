@@ -36,6 +36,7 @@
 		9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723029D7738F0055ED3E /* CountryEntity+.swift */; };
 		9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723229D774E10055ED3E /* CountriesContainer.swift */; };
 		90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */; };
+		90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF929EE09D3002EEE07 /* BeachEntity+.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		909E1EAD29E8A63000A12C53 /* NewAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E1EAC29E8A63000A12C53 /* NewAutoView.swift */; };
 		90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */; };
@@ -102,6 +103,7 @@
 		9045723029D7738F0055ED3E /* CountryEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryEntity+.swift"; sourceTree = "<group>"; };
 		9045723229D774E10055ED3E /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
 		90835DF729EE0487002EEE07 /* BeachesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeachesDataModel.xcdatamodel; sourceTree = "<group>"; };
+		90835DF929EE09D3002EEE07 /* BeachEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeachEntity+.swift"; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		909E1EAC29E8A63000A12C53 /* NewAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAutoView.swift; sourceTree = "<group>"; };
 		90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsClassesView.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */,
+				90835DF929EE09D3002EEE07 /* BeachEntity+.swift */,
 			);
 			path = "CORE DATA (Derived)";
 			sourceTree = "<group>";
@@ -514,6 +517,7 @@
 				9021441929D684A100926E4A /* TaskContainer.swift in Sources */,
 				90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */,
 				901E5FFA29DB39C000655A2D /* AutosContainer.swift in Sources */,
+				90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */,
 				90D3180A29D606D1003F591B /* ParksDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
