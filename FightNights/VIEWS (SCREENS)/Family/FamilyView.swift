@@ -12,13 +12,20 @@ struct FamilyView: View {
     private var familyMembers
   
     var body: some View {
-      ScrollView {
-        OutlineGroup(Array(familyMembers), children: \.viewChildren) { familyMember in
-          Text(familyMember.viewName)
-        }
-        .padding()
+      NavigationStack {
+          List(Array(familyMembers), children: \.viewChildren) { familyMember in
+            Text(familyMember.viewName)
+              .listRowSeparator(.visible)
+              .listRowSeparatorTint(.pink)
+          }
+         
+ 
+          .navigationTitle("Self References")
+        
       }
-    }
+
+   
+    }//body
 }
 
 struct FamilyView_Previews: PreviewProvider {
