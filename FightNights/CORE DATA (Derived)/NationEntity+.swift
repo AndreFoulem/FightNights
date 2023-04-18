@@ -15,4 +15,16 @@ extension NationEntity {
   var viewBeachEntities: [BeachEntity] {
     return beachEntity?.allObjects as? [BeachEntity] ?? []
   }
+  
+  var viewBeachNames: [String] {
+    var beachNames: [String] = []
+    
+      if let beaches = beachEntity {
+        for case let beach as BeachEntity in beaches {
+          beachNames.append(beach.viewName)
+        }
+      }
+    
+    return beachNames
+  }
 }
