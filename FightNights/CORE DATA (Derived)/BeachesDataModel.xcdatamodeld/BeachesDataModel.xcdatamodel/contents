@@ -10,10 +10,10 @@
         <relationship name="nationEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NationEntity" inverseName="beachEntity" inverseEntity="NationEntity"/>
     </entity>
     <entity name="NationEntity" representedClassName="NationEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="beachCount" optional="YES" attributeType="Integer 16" usesScalarValueType="YES"/>
+        <attribute name="beachCount" optional="YES" attributeType="Integer 16" derived="YES" derivationExpression="count:(beachEntity)" usesScalarValueType="YES"/>
         <attribute name="lastUpdated" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="ratingSum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ratingSum" optional="YES" attributeType="Integer 16" derived="YES" derivationExpression="beachEntity.rating.@sum" usesScalarValueType="YES"/>
         <relationship name="beachEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BeachEntity" inverseName="nationEntity" inverseEntity="BeachEntity"/>
     </entity>
 </model>

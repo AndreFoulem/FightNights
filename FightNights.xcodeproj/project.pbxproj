@@ -35,6 +35,7 @@
 		9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9045722D29D773370055ED3E /* CountriesDataModel.xcdatamodeld */; };
 		9045723129D7738F0055ED3E /* CountryEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723029D7738F0055ED3E /* CountryEntity+.swift */; };
 		9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723229D774E10055ED3E /* CountriesContainer.swift */; };
+		9062B26E29EF1BE500A00F3E /* NationEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062B26D29EF1BE500A00F3E /* NationEntity+.swift */; };
 		90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */; };
 		90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF929EE09D3002EEE07 /* BeachEntity+.swift */; };
 		9092AE0F29EE0DA900A80513 /* BeachContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE0E29EE0DA900A80513 /* BeachContainer.swift */; };
@@ -104,6 +105,7 @@
 		9045722E29D773370055ED3E /* CountriesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CountriesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9045723029D7738F0055ED3E /* CountryEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CountryEntity+.swift"; sourceTree = "<group>"; };
 		9045723229D774E10055ED3E /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
+		9062B26D29EF1BE500A00F3E /* NationEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationEntity+.swift"; sourceTree = "<group>"; };
 		90835DF729EE0487002EEE07 /* BeachesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeachesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90835DF929EE09D3002EEE07 /* BeachEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeachEntity+.swift"; sourceTree = "<group>"; };
 		9092AE0E29EE0DA900A80513 /* BeachContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachContainer.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */,
 				90835DF929EE09D3002EEE07 /* BeachEntity+.swift */,
 				9092AE0E29EE0DA900A80513 /* BeachContainer.swift */,
+				9062B26D29EF1BE500A00F3E /* NationEntity+.swift */,
 			);
 			path = "CORE DATA (Derived)";
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				90D3181329D615D9003F591B /* ParksView.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
 				90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */,
+				9062B26E29EF1BE500A00F3E /* NationEntity+.swift in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
 				901E5FFE29DB413600655A2D /* ManufacturerEntity+.swift in Sources */,
 				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,
