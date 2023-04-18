@@ -17,6 +17,8 @@ extension NationEntity {
   }
   
   var viewBeachNames: [String] {
+    // Looping through the beachEntity to-many relationship collection and returning
+    // an array of string
     var beachNames: [String] = []
     
       if let beaches = beachEntity {
