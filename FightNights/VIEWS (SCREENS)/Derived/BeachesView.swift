@@ -13,9 +13,12 @@ struct BeachesView: View {
   
     var body: some View {
       NavigationStack {
-        VStack(alignment: .leading, spacing: 4) {
-          
+        List(beaches) { beach in
+          VStack(alignment: .leading, spacing: 4) {
+            Text(beach.viewName)
+          }
         }
+        .font(.title)
       }
     }
 }
