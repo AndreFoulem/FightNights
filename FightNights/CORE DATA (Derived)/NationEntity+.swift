@@ -9,11 +9,11 @@ import Foundation
 
 extension NationEntity {
   var viewName: String {
-    return name ?? ""
+    return self.name ?? ""
   }
   
   var viewBeachEntities: [BeachEntity] {
-    return beachEntity?.allObjects as? [BeachEntity] ?? []
+    return self.beachEntity?.allObjects as? [BeachEntity] ?? []
   }
   
   var viewBeachNames: [String] {
@@ -21,7 +21,7 @@ extension NationEntity {
     // an array of string
     var beachNames: [String] = []
     
-      if let beaches = beachEntity {
+    if let beaches = self.beachEntity {
         for case let beach as BeachEntity in beaches {
           beachNames.append(beach.viewName)
         }
@@ -31,11 +31,11 @@ extension NationEntity {
   }
   
   var viewAverageRating: String {
-    if beachCount == 0 {
+    if self.beachCount == 0 {
       return "N/A"
     }
-    let avg = Double(ratingSum/beachCount)
-    
+    let avg = Double(self.ratingSum/self.beachCount)
+
     return "Average Beach Rating \(avg)"
   }
   
