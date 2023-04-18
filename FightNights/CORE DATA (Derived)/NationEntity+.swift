@@ -29,4 +29,14 @@ extension NationEntity {
     
     return beachNames
   }
+  
+  var viewAverageRating: String {
+    if beachCount == 0 {
+      return "N/A"
+    }
+    let avg = Double(ratingSum/beachCount)
+    
+    return "Average Beach Rating \(avg)"
+  }
+  
 }
