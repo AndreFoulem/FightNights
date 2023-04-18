@@ -9,7 +9,7 @@ import CoreData
 
 final class BeachContainer {
   let container: NSPersistentContainer
-  “
+  
   init(forPreview: Bool = false) {
     container = NSPersistentContainer(name: "BeachDataModel")
     

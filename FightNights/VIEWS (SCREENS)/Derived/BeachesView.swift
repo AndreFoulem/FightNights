@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct BeachesView: View {
+  @FetchRequest<BeachEntity>(sortDescriptors: [SortDescriptor(\.nationEntity?.name)])
+   private var beaches
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      NavigationStack {
+        VStack(alignment: .leading, spacing: 4) {
+          
+        }
+      }
     }
 }
 
 struct BeachesView_Previews: PreviewProvider {
     static var previews: some View {
         BeachesView()
+        .environment(\.managedObjectContext, BeachContainer.preview)
     }
 }
