@@ -16,9 +16,15 @@ struct BeachesView: View {
         List(beaches) { beach in
           VStack(alignment: .leading, spacing: 4) {
             Text(beach.viewName)
+              .font(.title)
+            Text(beach.viewPlace)
+            Text(beach.placeCanonical ?? "")
+            Text(beach.placeLowercase ?? "")
+            Text(beach.placeUppercase ?? "")
           }
+          .font(.body.weight(.light))
         }
-        .font(.title)
+        .listStyle(.insetGrouped)
       }
     }
 }
