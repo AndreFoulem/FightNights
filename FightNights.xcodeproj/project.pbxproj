@@ -38,6 +38,7 @@
 		90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */; };
 		90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF929EE09D3002EEE07 /* BeachEntity+.swift */; };
 		9092AE0F29EE0DA900A80513 /* BeachContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE0E29EE0DA900A80513 /* BeachContainer.swift */; };
+		9092AE1229EE109300A80513 /* BeachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE1129EE109300A80513 /* BeachesView.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		909E1EAD29E8A63000A12C53 /* NewAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E1EAC29E8A63000A12C53 /* NewAutoView.swift */; };
 		90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */; };
@@ -106,6 +107,7 @@
 		90835DF729EE0487002EEE07 /* BeachesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeachesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90835DF929EE09D3002EEE07 /* BeachEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeachEntity+.swift"; sourceTree = "<group>"; };
 		9092AE0E29EE0DA900A80513 /* BeachContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachContainer.swift; sourceTree = "<group>"; };
+		9092AE1129EE109300A80513 /* BeachesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachesView.swift; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		909E1EAC29E8A63000A12C53 /* NewAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAutoView.swift; sourceTree = "<group>"; };
 		90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsClassesView.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 		901C5FD529C5586700029C77 /* VIEWS (SCREENS) */ = {
 			isa = PBXGroup;
 			children = (
+				9092AE1029EE107D00A80513 /* Derived */,
 				9022BB7029E9C63D007CE9C3 /* Family */,
 				90BE96AB29DE57F400DA409D /* Autos */,
 				901C5FA629C557AB00029C77 /* BookView.swift */,
@@ -311,6 +314,14 @@
 				9092AE0E29EE0DA900A80513 /* BeachContainer.swift */,
 			);
 			path = "CORE DATA (Derived)";
+			sourceTree = "<group>";
+		};
+		9092AE1029EE107D00A80513 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				9092AE1129EE109300A80513 /* BeachesView.swift */,
+			);
+			path = Derived;
 			sourceTree = "<group>";
 		};
 		90BE96AB29DE57F400DA409D /* Autos */ = {
@@ -500,6 +511,7 @@
 				9045722F29D773370055ED3E /* CountriesDataModel.xcdatamodeld in Sources */,
 				901E5FFC29DB412A00655A2D /* AutoEntity+.swift in Sources */,
 				9022BB7229E9C651007CE9C3 /* FamilyView.swift in Sources */,
+				9092AE1229EE109300A80513 /* BeachesView.swift in Sources */,
 				9021441529D6814E00926E4A /* TasksDataModel.xcdatamodeld in Sources */,
 				901C5FAE29C557AB00029C77 /* BookContainer.swift in Sources */,
 				90BE96A829DE523800DA409D /* StockView.swift in Sources */,
