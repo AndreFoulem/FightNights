@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct AsyncCountriesView: View {
+   @FetchRequest<CountryEntity>(sortDescriptors: []) private var countries
+  
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      List(countries) { country in
+        Text(country.viewName)
+      }
     }
 }
 
 struct AsyncCountriesView_Previews: PreviewProvider {
     static var previews: some View {
-        AsyncCountriesView()
+      AsyncCountriesView()
+        .environment(\.managedObjectContext, CountriesContainer.preview)
     }
 }
