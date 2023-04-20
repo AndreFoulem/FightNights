@@ -8,12 +8,27 @@
 import SwiftUI
 
 struct AsyncCountriesView: View {
+  @Environment(\.managedObjectContext) var context
    @FetchRequest<CountryEntity>(sortDescriptors: []) private var countries
   
     var body: some View {
-      List(countries) { country in
-        Text(country.viewName)
+      VStack {
+        List {
+          ForEach(countries) { country in
+            Text(country.viewName)
+          }
+        }
+        Button("Change first country to Brazil") {
+          let country = countries[0]
+          DispatchQueue.global(qos: .userInitiated).async {
+            context.perform {
+              country.name = "Brazil"
+              try! context.save()
+            }
+          }
+        }
       }
+      
     }
 }
 
