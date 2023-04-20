@@ -39,4 +39,8 @@ extension NationEntity {
     return "Average Beach Rating \(avg)"
   }
   
+  var viewLastUpdated: String {
+    return "Last Updated " + (lastUpdated?.formatted(date: .numeric, time: .complete) ?? "n/a")
+  }
+  
 }

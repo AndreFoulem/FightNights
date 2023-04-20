@@ -11,10 +11,10 @@ import Foundation
 extension CountryEntity {
   
   var viewName: String {
-     name ?? "N/A"
+    self.name ?? "N/A"
   }
   
   var viewDate: String {
-    lastVisited?.formatted(date: .numeric, time: .omitted) ?? ""
+    self.lastVisited?.formatted(date: .numeric, time: .omitted) ?? ""
   }
 }

@@ -25,6 +25,7 @@ struct NationView: View {
                 Text(nation.viewName)
                   .font(.title)
                 Text(nation.viewAverageRating)
+                Text(nation.viewLastUpdated)
               }
             }
           }

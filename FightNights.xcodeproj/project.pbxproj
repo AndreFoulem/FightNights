@@ -43,6 +43,7 @@
 		9092AE1229EE109300A80513 /* BeachesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE1129EE109300A80513 /* BeachesView.swift */; };
 		9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092BDEB29CD522600685FC4 /* BookEntity+.swift */; };
 		909E1EAD29E8A63000A12C53 /* NewAutoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E1EAC29E8A63000A12C53 /* NewAutoView.swift */; };
+		90A306A629F1AEA2002EF42D /* AsyncCountriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A306A529F1AEA2002EF42D /* AsyncCountriesView.swift */; };
 		90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */; };
 		90BE96A529DE500200DA409D /* StudentEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A429DE500200DA409D /* StudentEntity+.swift */; };
 		90BE96A829DE523800DA409D /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90BE96A729DE523800DA409D /* StockView.swift */; };
@@ -114,6 +115,7 @@
 		9092AE1129EE109300A80513 /* BeachesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachesView.swift; sourceTree = "<group>"; };
 		9092BDEB29CD522600685FC4 /* BookEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+.swift"; sourceTree = "<group>"; };
 		909E1EAC29E8A63000A12C53 /* NewAutoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAutoView.swift; sourceTree = "<group>"; };
+		90A306A529F1AEA2002EF42D /* AsyncCountriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCountriesView.swift; sourceTree = "<group>"; };
 		90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsClassesView.swift; sourceTree = "<group>"; };
 		90BE96A429DE500200DA409D /* StudentEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudentEntity+.swift"; sourceTree = "<group>"; };
 		90BE96A729DE523800DA409D /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
@@ -243,10 +245,10 @@
 				9092AE1029EE107D00A80513 /* Derived */,
 				9022BB7029E9C63D007CE9C3 /* Family */,
 				90BE96AB29DE57F400DA409D /* Autos */,
+				90A306A429F1AE4E002EF42D /* Countries */,
 				901C5FA629C557AB00029C77 /* BookView.swift */,
 				90D3181229D615D9003F591B /* ParksView.swift */,
 				9045722729D72A140055ED3E /* TasksView.swift */,
-				90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */,
 				90BE96A229DE4F1B00DA409D /* SchoolsClassesView.swift */,
 				90BE96A929DE52EF00DA409D /* ClassView.swift */,
 				90BE96A729DE523800DA409D /* StockView.swift */,
@@ -328,6 +330,15 @@
 				9062B26F29EF205100A00F3E /* NationView.swift */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		90A306A429F1AE4E002EF42D /* Countries */ = {
+			isa = PBXGroup;
+			children = (
+				90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */,
+				90A306A529F1AEA2002EF42D /* AsyncCountriesView.swift */,
+			);
+			path = Countries;
 			sourceTree = "<group>";
 		};
 		90BE96AB29DE57F400DA409D /* Autos */ = {
@@ -500,6 +511,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A306A629F1AEA2002EF42D /* AsyncCountriesView.swift in Sources */,
 				9022BB6F29E9C5B7007CE9C3 /* FamilyMemberEntity+.swift in Sources */,
 				9062B27029EF205100A00F3E /* NationView.swift in Sources */,
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
