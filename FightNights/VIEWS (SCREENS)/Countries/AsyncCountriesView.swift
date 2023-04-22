@@ -19,17 +19,22 @@ struct AsyncCountriesView: View {
           }
         }
         Button("Change first country to Brazil") {
-          let country = countries[0]
-          DispatchQueue.global(qos: .userInitiated).async {
-            context.perform {
-              country.name = "Brazil"
-              try! context.save()
-            }
+          Task {
+            let country = countries[0]
+            try? await Task.sleep(nanoseconds: 2_000_000_000)
+            country.name = "Brazil"
+            try! context.save()
+            
           }
         }
       }
       
-    }
+    }//body
+    
+  func AddNewCountry() async throws {
+    
+  }
+  
 }
 
 struct AsyncCountriesView_Previews: PreviewProvider {
