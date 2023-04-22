@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct AsyncCountriesView: View {
-  @Environment(\.managedObjectContext) var context
+   @Environment(\.managedObjectContext) var context
    @FetchRequest<CountryEntity>(sortDescriptors: []) private var countries
+  
+   @State private var error: Error?
+   @State private var showError = false
   
     var body: some View {
       VStack {
@@ -20,10 +23,13 @@ struct AsyncCountriesView: View {
         }
         Button("Change first country to Brazil") {
           Task {
-            let country = countries[0]
-            try? await Task.sleep(nanoseconds: 2_000_000_000)
-            country.name = "Brazil"
-            try! context.save()
+            do {
+              try await AddNewCountry()
+            } catch {
+              context.rollback() // undo
+              self.error = error
+              showError = true
+            }
             
           }
         }
