@@ -23,6 +23,15 @@ struct AsyncCountriesView: View {
           }
         }
       
+        Button("Update & Delete") {
+          let selectedCountry = countries[0].objectID
+          Task {
+            await updateCountry(objectId: selectedCountry)
+          }
+          Task {
+            await deleteCountry(objectId: selectedCountry)
+          }
+        }
         Button("Get four countries") {
           Task {
             countries = try await context.perform {
