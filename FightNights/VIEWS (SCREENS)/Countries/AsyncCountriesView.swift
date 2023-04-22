@@ -32,7 +32,11 @@ struct AsyncCountriesView: View {
     }//body
     
   func AddNewCountry() async throws {
-    
+    try await context.perform {
+      let country = CountryEntity(context: context)
+      country.name = "New Country"
+      try context.save() // throws an error
+    }
   }
   
 }
