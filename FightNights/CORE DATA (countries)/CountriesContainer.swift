@@ -8,9 +8,10 @@
 import CoreData
 
 public class CountriesContainer {
-  let container = NSPersistentContainer(name: "CountriesDataModel")
+  let container: NSPersistentContainer
   
   init(forPreview: Bool = false) {
+   container = NSPersistentContainer(name: "CountriesDataModel")
     
     if(forPreview) {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null") }
@@ -24,6 +25,19 @@ public class CountriesContainer {
     let context = container.viewContext
     context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
   }
+ 
+  static var shared: CountriesContainer {
+    return sharedCountriesContainer
+  }
+  
+  private static var sharedCountriesContainer: CountriesContainer = {
+    #if DEBUG
+    return CountriesContainer(forPreview: true)
+    #else
+    return CountriesContainer()
+    #endif
+  }()
+  
 }
 
 extension CountriesContainer {
