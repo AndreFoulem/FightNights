@@ -21,7 +21,9 @@ struct FightNightsApp: App {
             //: B -> Reference the viewContext in .environment
           AsyncCountriesView()
             .environment(\.managedObjectContext,
-                          CountriesContainer(forPreview: true).container.viewContext)
+                          CountriesContainer.shared.container.viewContext)
+//            .environment(\.managedObjectContext,
+//                          CountriesContainer(forPreview: true).container.viewContext)
         }
     }
 }

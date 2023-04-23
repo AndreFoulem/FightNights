@@ -9,90 +9,33 @@ import SwiftUI
 import CoreData
 
 struct AsyncCountriesView: View {
-   @Environment(\.managedObjectContext) var context
-   @State private var countries: [CountryEntity] = []
-  
-   @State private var error: Error?
-   @State private var showError = false
-  
+     // MARK: CoreData
+     @Environment(\.managedObjectContext) var context
+     @FetchRequest<CountryEntity>(sortDescriptors: [])
+     private var countries
+
     var body: some View {
-      VStack {
-        List {
-          ForEach(countries) { country in
-            Text(country.viewName)
-          }
-        }
-      
-        Button("Update & Delete") {
-          let selectedCountry = countries[0].objectID
-          Task {
-            await updateCountry(objectId: selectedCountry)
-          }
-          Task {
-            await deleteCountry(objectId: selectedCountry)
-          }
-        }
-        Button("Get four countries") {
-          Task {
-            countries = try await context.perform {
-              var result: [CountryEntity] = []
-              
-              let request = CountryEntity.fetchRequest()
-              request.fetchLimit = 4
-              
-              try request.execute().forEach({ countryEntity in
-                result.append(countryEntity)
-              })
-              
-              return result
-            }
-          }//task
-        }//button
-        .alert("Error", isPresented: $showError, presenting: error) { _ in
-        } message: { _ in
-          Text("Core Data Error")
-        }
-     
-      }//vs
     
-      
-    }//body
-    
-  func functionOne() async {
-    try! await Task.sleep(nanoseconds: 1_000_000_000)
-    print("functionOne")
-  }
-  
-  func functionTwo() async {
-    print("functionTwo")
-  }
-  
-  func updateCountry(objectId: NSManagedObjectID) async {
-    print("1")
-    await context.perform {
-        print("3")
-        
-      Thread.sleep(forTimeInterval: 1)
-      do {
-        let country = try context.existingObject(with: objectId) as! CountryEntity
-        country.name = "Samoa"
-        try context.save()
-      } catch {
-        print(error.localizedDescription)
+      List {
+        ForEach(countries) { country in
+          Text(country.viewName)
+            .foregroundColor(country.name == "Brazil" ? .green: .primary)
+        }
       }
-    }
-  }
+      .refreshable {
+        
+        let backgroundContext = CountriesContainer.shared.backgroundContext
   
-  func deleteCountry(objectId: NSManagedObjectID) async {
-    print("2")
-    await context.perform {
-      print("4")
-      let country = try! context.existingObject(with: objectId) as! CountryEntity
-      context.delete(country)
-      try! context.save()
-    }
-  }
+        backgroundContext.perform {
+          let country = CountryEntity(context: backgroundContext)
+          country.name = "Brazil"
+          
+          try! backgroundContext.save()
+        }
+        
+      }
   
+    }//body
 }
 
 struct AsyncCountriesView_Previews: PreviewProvider {

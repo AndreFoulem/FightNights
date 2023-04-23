@@ -9,6 +9,7 @@ import CoreData
 
 public class CountriesContainer {
   let container: NSPersistentContainer
+  let backgroundContext: NSManagedObjectContext
   
   init(forPreview: Bool = false) {
    container = NSPersistentContainer(name: "CountriesDataModel")
@@ -17,13 +18,17 @@ public class CountriesContainer {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null") }
     
     container.loadPersistentStores { _, _ in }
+    backgroundContext = container.newBackgroundContext()
+    
+    let context = container.viewContext
+    context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+    context.automaticallyMergesChangesFromParent = true
     
     if(forPreview) {
       CountriesContainer.addMockData(moc: container.viewContext)
     }
     
-    let context = container.viewContext
-    context.mergePolicy = NSMergePolicy.mergeByPropertyStoreTrump
+ 
   }
  
   static var shared: CountriesContainer {
