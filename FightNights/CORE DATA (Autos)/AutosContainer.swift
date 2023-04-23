@@ -18,7 +18,7 @@ final class AutosContainer {
     let context = container.viewContext
     context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
     context.automaticallyMergesChangesFromParent = true
-    backgroundContext = container.newBackgroundContext()
+ 
     
     // MARK: debug path
     if(forPreview) {
@@ -26,6 +26,7 @@ final class AutosContainer {
     }
     
     container.loadPersistentStores { _, _ in }
+    backgroundContext = container.newBackgroundContext()
  
     //: MARK: debug data
     if(forPreview) {

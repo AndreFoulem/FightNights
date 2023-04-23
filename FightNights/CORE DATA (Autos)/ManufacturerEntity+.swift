@@ -20,6 +20,11 @@ extension ManufacturerEntity {
     // convert NSSET to an array
     return autoEntity?.array as? [AutoEntity] ?? []
   }
+  
+  var viewManufacturers: [ManufacturerEntity] {
+    let manufacturers = self.value(forKey: "fetchedManufacturers") as? [ManufacturerEntity]
+    return manufacturers ?? []
+  }
 }
 
 //-> NSSet for relationship => entityName has .allObjects property
