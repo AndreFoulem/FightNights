@@ -21,7 +21,7 @@ struct FetchedNoPredicate: View {
           }
           
           Section("All manufacturers") {
-            ForEach(rivian.viewManufacturers) { manufacturer in
+            ForEach(rivian.viewManufacturersLessRivian) { manufacturer in
               VStack(alignment: .leading) {
                 Text(manufacturer.viewName)
                 Text(manufacturer.viewCountry)

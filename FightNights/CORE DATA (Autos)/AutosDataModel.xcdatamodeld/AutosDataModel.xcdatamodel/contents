@@ -12,5 +12,8 @@
         <fetchedProperty name="fetchedManufacturers" optional="YES">
             <fetchRequest name="fetchedPropertyFetchRequest" entity="ManufacturerEntity"/>
         </fetchedProperty>
+        <fetchedProperty name="manufacturersLessRivian" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="ManufacturerEntity" predicateString="name != 'Rivian'"/>
+        </fetchedProperty>
     </entity>
 </model>
