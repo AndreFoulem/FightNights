@@ -19,9 +19,9 @@ struct FightNightsApp: App {
     var body: some Scene {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-          AsyncCountriesView()
+          AutosParentChild()
             .environment(\.managedObjectContext,
-                          CountriesContainer.shared.container.viewContext)
+                          AutosContainer.shared.container.viewContext)
 //            .environment(\.managedObjectContext,
 //                          CountriesContainer(forPreview: true).container.viewContext)
         }

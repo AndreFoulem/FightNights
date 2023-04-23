@@ -9,27 +9,42 @@ import CoreData
 
 final class AutosContainer {
   let container : NSPersistentContainer
+  let backgroundContext: NSManagedObjectContext
   
   init(forPreview: Bool = false) {
     container = NSPersistentContainer(name: "AutosDataModel")
     
-    //-> Add policies on context
+    //MARK: context policies
     let context = container.viewContext
     context.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
+    context.automaticallyMergesChangesFromParent = true
+    backgroundContext = container.newBackgroundContext()
     
-    //-> Set store url for preview
+    // MARK: debug path
     if(forPreview) {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
     }
     
-    //-> load data store
     container.loadPersistentStores { _, _ in }
-    
-    //-> Call mock data on preview
+ 
+    //: MARK: debug data
     if(forPreview) {
       AutosContainer.addMockData(moc: context)
     }
   }//init
+  
+  static var shared: AutosContainer {
+    return sharedAutosContainer
+  }
+  
+  private static var sharedAutosContainer: AutosContainer
+  = {
+    #if DEBUG
+    return AutosContainer(forPreview: true)
+    #else
+    return AutosContainer()
+    #endif
+  }()
   
 }
 

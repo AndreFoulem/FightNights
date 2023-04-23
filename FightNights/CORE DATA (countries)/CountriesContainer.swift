@@ -12,7 +12,7 @@ public class CountriesContainer {
   let backgroundContext: NSManagedObjectContext
   
   init(forPreview: Bool = false) {
-   container = NSPersistentContainer(name: "CountriesDataModel")
+    container = NSPersistentContainer(name: "CountriesDataModel")
     
     if(forPreview) {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null") }
@@ -27,15 +27,14 @@ public class CountriesContainer {
     if(forPreview) {
       CountriesContainer.addMockData(moc: container.viewContext)
     }
-    
- 
   }
  
   static var shared: CountriesContainer {
     return sharedCountriesContainer
   }
   
-  private static var sharedCountriesContainer: CountriesContainer = {
+  private static var sharedCountriesContainer: CountriesContainer
+  = {
     #if DEBUG
     return CountriesContainer(forPreview: true)
     #else
