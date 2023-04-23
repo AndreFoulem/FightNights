@@ -22,17 +22,12 @@ struct AsyncCountriesView: View {
             .foregroundColor(country.name == "Brazil" ? .green: .primary)
         }
       }
-      .refreshable {
+      Button("Refresh") {
+        let container = CountriesContainer.shared.container
         
-        let backgroundContext = CountriesContainer.shared.backgroundContext
-  
-        backgroundContext.perform {
-          let country = CountryEntity(context: backgroundContext)
-          country.name = "Brazil"
-          
-          try! backgroundContext.save()
+        container.performBackgroundTask { backgroundContext in
+          backgroundContext.refreshAllObjects()
         }
-        
       }
   
     }//body
