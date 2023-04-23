@@ -25,6 +25,11 @@ extension ManufacturerEntity {
     let manufacturers = self.value(forKey: "fetchedManufacturers") as? [ManufacturerEntity]
     return manufacturers ?? []
   }
+  
+  var viewManufacturersLessRivian: [ManufacturerEntity] {
+    let manu = self.value(forKey: "manufacturersLessRivian") as? [ManufacturerEntity]
+    return manu ?? []
+  }
 }
 
 //-> NSSet for relationship => entityName has .allObjects property
