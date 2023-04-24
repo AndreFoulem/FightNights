@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct FetchedNoPredicate: View {
-   @FetchRequest<ManufacturerEntity>(sortDescriptors: [],
-                            predicate: NSPredicate(format: "name = 'Rivian'"))
-                            private var rivians
+   @FetchRequest<ManufacturerEntity>(sortDescriptors: [])
+                            private var manufacturers
   
     var body: some View {
-      VStack {
-        List(rivians) { rivian in
-          VStack {
-            Text(rivian.viewName)
-            Text(rivian.viewCountry).font(.body)
-          }
+      NavigationStack {
+        List(manufacturers) { manufacturer in
           
-          Section("All manufacturers") {
-            ForEach(rivian.viewManufacturersLessRivian) { manufacturer in
-              VStack(alignment: .leading) {
-                Text(manufacturer.viewName)
-                Text(manufacturer.viewCountry)
+          NavigationLink {
+            VStack {
+              List(manufacturer.viewAutoEntities) { auto in
+                Text(auto.viewModel)
+              }
+              Text("All manufa in \(manufacturer.viewCountry)")
+              List(manufacturer.viewManufacturersInSameCountry) { sameCountry in
+                Text(sameCountry.viewName)
               }
             }
+            .navigationTitle(manufacturer.viewName)
+          } label: {
+            Text(manufacturer.viewName)
           }
-        }
-      }//vs
+    
+        }//list
+          
+      }//ns
+        
       
     }
 }
