@@ -77,7 +77,7 @@ extension AutosContainer {
     
     let toyota = ManufacturerEntity(context: moc)
     toyota.name =  "Toyoata"
-    toyota.country = "Japan"
+    toyota.country = "Germany"
     toyota.autoEntity = [
       addAuto(moc: moc, model: "zz4 e-tron", year: "2006"),
       addAuto(moc: moc, model: "zz3 e-tron", year: "2018"),

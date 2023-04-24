@@ -12,6 +12,9 @@
         <fetchedProperty name="fetchedManufacturers" optional="YES">
             <fetchRequest name="fetchedPropertyFetchRequest" entity="ManufacturerEntity"/>
         </fetchedProperty>
+        <fetchedProperty name="manufacturersInSameCountry" optional="YES">
+            <fetchRequest name="fetchedPropertyFetchRequest" entity="ManufacturerEntity" predicateString="country == $FETCH_SOURCE.country"/>
+        </fetchedProperty>
         <fetchedProperty name="manufacturersLessRivian" optional="YES">
             <fetchRequest name="fetchedPropertyFetchRequest" entity="ManufacturerEntity" predicateString="name != 'Rivian'"/>
         </fetchedProperty>
