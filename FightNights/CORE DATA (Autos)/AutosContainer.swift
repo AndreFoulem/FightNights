@@ -25,10 +25,11 @@ final class AutosContainer {
       container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
     }
     
+    // MARK: load data
     container.loadPersistentStores { _, _ in }
     backgroundContext = container.newBackgroundContext()
  
-    //: MARK: debug data
+    //: MARK: mock data
     if(forPreview) {
       AutosContainer.addMockData(moc: context)
     }
