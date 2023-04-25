@@ -37,6 +37,7 @@
 		9045723329D774E10055ED3E /* CountriesContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9045723229D774E10055ED3E /* CountriesContainer.swift */; };
 		9062B26E29EF1BE500A00F3E /* NationEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062B26D29EF1BE500A00F3E /* NationEntity+.swift */; };
 		9062B27029EF205100A00F3E /* NationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062B26F29EF205100A00F3E /* NationView.swift */; };
+		9074812929F8814800F51E32 /* PlanetsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9074812729F8814800F51E32 /* PlanetsDataModel.xcdatamodeld */; };
 		90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */; };
 		90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF929EE09D3002EEE07 /* BeachEntity+.swift */; };
 		9092AE0F29EE0DA900A80513 /* BeachContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE0E29EE0DA900A80513 /* BeachContainer.swift */; };
@@ -110,6 +111,7 @@
 		9045723229D774E10055ED3E /* CountriesContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesContainer.swift; sourceTree = "<group>"; };
 		9062B26D29EF1BE500A00F3E /* NationEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationEntity+.swift"; sourceTree = "<group>"; };
 		9062B26F29EF205100A00F3E /* NationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NationView.swift; sourceTree = "<group>"; };
+		9074812829F8814800F51E32 /* PlanetsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90835DF729EE0487002EEE07 /* BeachesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeachesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90835DF929EE09D3002EEE07 /* BeachEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeachEntity+.swift"; sourceTree = "<group>"; };
 		9092AE0E29EE0DA900A80513 /* BeachContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachContainer.swift; sourceTree = "<group>"; };
@@ -318,6 +320,7 @@
 		9074812529F880EA00F51E32 /* CORE DATA (Planets) */ = {
 			isa = PBXGroup;
 			children = (
+				9074812729F8814800F51E32 /* PlanetsDataModel.xcdatamodeld */,
 			);
 			path = "CORE DATA (Planets)";
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				9062B27029EF205100A00F3E /* NationView.swift in Sources */,
 				9092BDEC29CD522600685FC4 /* BookEntity+.swift in Sources */,
 				90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */,
+				9074812929F8814800F51E32 /* PlanetsDataModel.xcdatamodeld in Sources */,
 				90271CE929DCFA13002DB4CF /* AutosParentChild.swift in Sources */,
 				90BE96A329DE4F1B00DA409D /* SchoolsClassesView.swift in Sources */,
 				901E5FF829DB389800655A2D /* AutosDataModel.xcdatamodeld in Sources */,
@@ -940,6 +944,16 @@
 			);
 			currentVersion = 9045722E29D773370055ED3E /* CountriesDataModel.xcdatamodel */;
 			path = CountriesDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		9074812729F8814800F51E32 /* PlanetsDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9074812829F8814800F51E32 /* PlanetsDataModel.xcdatamodel */,
+			);
+			currentVersion = 9074812829F8814800F51E32 /* PlanetsDataModel.xcdatamodel */;
+			path = PlanetsDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
