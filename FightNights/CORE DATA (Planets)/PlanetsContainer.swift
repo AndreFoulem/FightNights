@@ -54,7 +54,15 @@ final class PlanetsContainer {
 extension PlanetsContainer {
   static func addMockData(moc: NSManagedObjectContext) {
     addPlanet(moc: moc, name: "Mercury", orbitalPeriod: 88, position: 1, picture: "mercury")
+    addPlanet(moc: moc, name: "Venus", orbitalPeriod: 225, position: 2, picture: "venus")
+    addPlanet(moc: moc, name: "Earth", orbitalPeriod: 356, position: 3, picture: "earth")
+    addPlanet(moc: moc, name: "Mars", orbitalPeriod: 687, position: 4, picture: "mars")
+    addPlanet(moc: moc, name: "Jupiter", orbitalPeriod: 4272, position: 5, picture: "jupiter")
+    addPlanet(moc: moc, name: "Saturn", orbitalPeriod: 10324, position: 6, picture: "saturn")
+    addPlanet(moc: moc, name: "Uranus", orbitalPeriod: 29904, position: 7, picture: "uranus")
+    addPlanet(moc: moc, name: "Neptune", orbitalPeriod: 58740, position: 8, picture: "neptune")
     
+    try? moc.save()
   }
   
   static func addPlanet(moc: NSManagedObjectContext, name: String, orbitalPeriod: Int32, position: Int16,  picture: String) {
