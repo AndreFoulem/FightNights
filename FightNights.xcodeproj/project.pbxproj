@@ -187,6 +187,7 @@
 				901C5FA429C557AB00029C77 /* FightNightsApp.swift */,
 				9045722929D730CB0055ED3E /* VIEWS (COMPONENTS) */,
 				901C5FD529C5586700029C77 /* VIEWS (SCREENS) */,
+				9074812529F880EA00F51E32 /* CORE DATA (Planets) */,
 				90835DF529EE0440002EEE07 /* CORE DATA (Derived) */,
 				90D8A21C29D7A66D0021A368 /* CORE DATA (Autos) */,
 				90E3765B29E9B8E700115E5D /* CORE DATA (Family) */,
@@ -312,6 +313,13 @@
 				9045723229D774E10055ED3E /* CountriesContainer.swift */,
 			);
 			path = "CORE DATA (countries)";
+			sourceTree = "<group>";
+		};
+		9074812529F880EA00F51E32 /* CORE DATA (Planets) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "CORE DATA (Planets)";
 			sourceTree = "<group>";
 		};
 		90835DF529EE0440002EEE07 /* CORE DATA (Derived) */ = {
