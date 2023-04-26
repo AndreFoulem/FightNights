@@ -19,9 +19,9 @@ struct FightNightsApp: App {
     var body: some Scene {
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-          FetchedNoPredicate()
+          FetchingWithOOView()
             .environment(\.managedObjectContext,
-                          AutosContainer.shared.container.viewContext)
+                          PlanetsContainer.shared.container.viewContext)
 //            .environment(\.managedObjectContext,
 //                          CountriesContainer(forPreview: true).container.viewContext)
         }

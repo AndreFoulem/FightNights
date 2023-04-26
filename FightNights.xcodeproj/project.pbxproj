@@ -40,6 +40,7 @@
 		9074812929F8814800F51E32 /* PlanetsDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9074812729F8814800F51E32 /* PlanetsDataModel.xcdatamodeld */; };
 		9074812B29F8823A00F51E32 /* PlanetsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9074812A29F8823A00F51E32 /* PlanetsContainer.swift */; };
 		9074812D29F88A3F00F51E32 /* PlanetEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9074812C29F88A3F00F51E32 /* PlanetEntity+.swift */; };
+		9074813429F8906200F51E32 /* FetchingWithOOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9074813329F8906200F51E32 /* FetchingWithOOView.swift */; };
 		90835DF829EE0487002EEE07 /* BeachesDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF629EE0487002EEE07 /* BeachesDataModel.xcdatamodeld */; };
 		90835DFA29EE09D3002EEE07 /* BeachEntity+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90835DF929EE09D3002EEE07 /* BeachEntity+.swift */; };
 		9092AE0F29EE0DA900A80513 /* BeachContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092AE0E29EE0DA900A80513 /* BeachContainer.swift */; };
@@ -57,6 +58,7 @@
 		90D3180E29D60BC2003F591B /* ParksContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3180D29D60BC2003F591B /* ParksContainer.swift */; };
 		90D3181329D615D9003F591B /* ParksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D3181229D615D9003F591B /* ParksView.swift */; };
 		90DE3D3C29D780FB00BD4A9D /* CountiresView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */; };
+		90E025F829F987FE00BCC1A3 /* PlanetsOO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E025F729F987FE00BCC1A3 /* PlanetsOO.swift */; };
 		90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90E3765C29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld */; };
 		90E3766029E9B9FB00115E5D /* FamilyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */; };
 		90FE576E29DE589300A2CF24 /* NewManufacturer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90FE576D29DE589300A2CF24 /* NewManufacturer.swift */; };
@@ -116,6 +118,7 @@
 		9074812829F8814800F51E32 /* PlanetsDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlanetsDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9074812A29F8823A00F51E32 /* PlanetsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsContainer.swift; sourceTree = "<group>"; };
 		9074812C29F88A3F00F51E32 /* PlanetEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlanetEntity+.swift"; sourceTree = "<group>"; };
+		9074813329F8906200F51E32 /* FetchingWithOOView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchingWithOOView.swift; sourceTree = "<group>"; };
 		90835DF729EE0487002EEE07 /* BeachesDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeachesDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90835DF929EE09D3002EEE07 /* BeachEntity+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeachEntity+.swift"; sourceTree = "<group>"; };
 		9092AE0E29EE0DA900A80513 /* BeachContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeachContainer.swift; sourceTree = "<group>"; };
@@ -133,6 +136,7 @@
 		90D3180D29D60BC2003F591B /* ParksContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksContainer.swift; sourceTree = "<group>"; };
 		90D3181229D615D9003F591B /* ParksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParksView.swift; sourceTree = "<group>"; };
 		90DE3D3B29D780FB00BD4A9D /* CountiresView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountiresView.swift; sourceTree = "<group>"; };
+		90E025F729F987FE00BCC1A3 /* PlanetsOO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsOO.swift; sourceTree = "<group>"; };
 		90E3765D29E9B90D00115E5D /* FamilyDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FamilyDataModel.xcdatamodel; sourceTree = "<group>"; };
 		90E3765F29E9B9FB00115E5D /* FamilyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyContainer.swift; sourceTree = "<group>"; };
 		90FE576D29DE589300A2CF24 /* NewManufacturer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewManufacturer.swift; sourceTree = "<group>"; };
@@ -254,6 +258,7 @@
 				9092AE1029EE107D00A80513 /* Derived */,
 				9022BB7029E9C63D007CE9C3 /* Family */,
 				90BE96AB29DE57F400DA409D /* Autos */,
+				9074812E29F88FA800F51E32 /* Planets Views + VM */,
 				90A306A429F1AE4E002EF42D /* Countries */,
 				901C5FA629C557AB00029C77 /* BookView.swift */,
 				90D3181229D615D9003F591B /* ParksView.swift */,
@@ -329,6 +334,15 @@
 				9074812C29F88A3F00F51E32 /* PlanetEntity+.swift */,
 			);
 			path = "CORE DATA (Planets)";
+			sourceTree = "<group>";
+		};
+		9074812E29F88FA800F51E32 /* Planets Views + VM */ = {
+			isa = PBXGroup;
+			children = (
+				9074813329F8906200F51E32 /* FetchingWithOOView.swift */,
+				90E025F729F987FE00BCC1A3 /* PlanetsOO.swift */,
+			);
+			path = "Planets Views + VM";
 			sourceTree = "<group>";
 		};
 		90835DF529EE0440002EEE07 /* CORE DATA (Derived) */ = {
@@ -562,11 +576,13 @@
 				9092AE0F29EE0DA900A80513 /* BeachContainer.swift in Sources */,
 				901C5FA729C557AB00029C77 /* BookView.swift in Sources */,
 				901C5FA529C557AB00029C77 /* FightNightsApp.swift in Sources */,
+				9074813429F8906200F51E32 /* FetchingWithOOView.swift in Sources */,
 				90BE96AA29DE52EF00DA409D /* ClassView.swift in Sources */,
 				90D3181329D615D9003F591B /* ParksView.swift in Sources */,
 				901C5FD929C5596200029C77 /* ContentView_blueprint.swift in Sources */,
 				90E3765E29E9B90D00115E5D /* FamilyDataModel.xcdatamodeld in Sources */,
 				9062B26E29EF1BE500A00F3E /* NationEntity+.swift in Sources */,
+				90E025F829F987FE00BCC1A3 /* PlanetsOO.swift in Sources */,
 				901C5FB129C557AB00029C77 /* FightNightsModel.xcdatamodeld in Sources */,
 				901E5FFE29DB413600655A2D /* ManufacturerEntity+.swift in Sources */,
 				9021441729D682C000926E4A /* TaskEntity+.swift in Sources */,

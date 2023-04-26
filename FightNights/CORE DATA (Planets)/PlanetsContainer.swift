@@ -76,7 +76,7 @@ extension PlanetsContainer {
 
 // MARK: Extension for preview managed context
 extension PlanetsContainer {
-  private var shared: NSManagedObjectContext {
+  static var preview: NSManagedObjectContext {
     let container = NSPersistentContainer(name: "PlanetsDataModel")
     container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
     container.loadPersistentStores { _, _ in }
