@@ -11,7 +11,7 @@ import CoreData
 final class PlanetsContainer {
   
   let container: NSPersistentContainer
-  let backgroundContext: NSManagedObjectContext
+//  let backgroundContext: NSManagedObjectContext
   
   init(forPreview: Bool = false) {
     container = NSPersistentContainer(name: "PlanetsDataModel")
@@ -28,11 +28,11 @@ final class PlanetsContainer {
     
     // MARK: load data
     container.loadPersistentStores { _, _ in }
-    backgroundContext = container.newBackgroundContext()
+//    backgroundContext = container.newBackgroundContext()
     
     // MARK: mock data
     if(forPreview) {
-//      PlanetsContainer.addMockData(moc: context)
+      PlanetsContainer.addMockData(moc: context)
     }
   }//init
   
@@ -67,6 +67,7 @@ extension PlanetsContainer {
   
   static func addPlanet(moc: NSManagedObjectContext, name: String, orbitalPeriod: Int32, position: Int16,  picture: String) {
     let planet = PlanetEntity(context: moc)
+    planet.id = UUID()
     planet.name = name
     planet.orbitalPeriod = orbitalPeriod
     planet.position = position
@@ -74,13 +75,4 @@ extension PlanetsContainer {
   }
 }
 
-// MARK: Extension for preview managed context
-extension PlanetsContainer {
-  static var preview: NSManagedObjectContext {
-    let container = NSPersistentContainer(name: "PlanetsDataModel")
-    container.persistentStoreDescriptions.first!.url = URL(filePath: "/dev/null")
-    container.loadPersistentStores { _, _ in }
-    Self.addMockData(moc: container.viewContext)
-    return container.viewContext
-  }
-}
+

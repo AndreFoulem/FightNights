@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FetchingWithOOView: View {
     // inject the OO
-    @StateObject var oo: PlanetsOO
+    @ObservedObject var oo: PlanetsOO
     var body: some View {
       NavigationStack {
         List(oo.planets) { planet in
@@ -27,13 +27,14 @@ struct FetchingWithOOView: View {
                 .font(.footnote)
                 .foregroundColor(.red)
             }
+            
           }//hs
           .padding(.vertical, 6)
         }//list
         .navigationTitle("Planets")
       }//ns
       .task {
-        
+        oo.fetch()
       }
       
     }//body
@@ -41,7 +42,6 @@ struct FetchingWithOOView: View {
 
 struct FetchingWithOOView_Previews: PreviewProvider {
     static var previews: some View {
-      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.preview ))
-//        .environment(\.managedObjectContext, PlanetsContainer.preview)
+      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
     }
 }

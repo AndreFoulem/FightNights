@@ -17,13 +17,11 @@ import SwiftUI
 struct FightNightsApp: App {
 
     var body: some Scene {
+        let moc = PlanetsContainer.shared.container.viewContext
+      
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-          FetchingWithOOView()
-            .environment(\.managedObjectContext,
-                          PlanetsContainer.shared.container.viewContext)
-//            .environment(\.managedObjectContext,
-//                          CountriesContainer(forPreview: true).container.viewContext)
+          FetchingWithOOView(oo: PlanetsOO(moc: moc))
         }
     }
 }
