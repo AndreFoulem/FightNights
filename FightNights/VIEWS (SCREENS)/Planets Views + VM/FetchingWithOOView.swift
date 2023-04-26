@@ -11,8 +11,32 @@ struct FetchingWithOOView: View {
     // inject the OO
     @StateObject var oo: PlanetsOO
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+      NavigationStack {
+        List(oo.planets) { planet in
+          HStack {
+            Image(uiImage: planet.viewImage)
+              .resizable()
+              .scaledToFit()
+              .frame(width: 60, height: 80)
+              .cornerRadius(8)
+            
+            VStack(alignment: .leading, spacing: 8.0) {
+              Text(planet.viewName)
+                .font(.title2.weight(.semibold))
+              Text(planet.viewOrbitalPeriod)
+                .font(.footnote)
+                .foregroundColor(.red)
+            }
+          }//hs
+          .padding(.vertical, 6)
+        }//list
+        .navigationTitle("Planets")
+      }//ns
+      .task {
+        
+      }
+      
+    }//body
 }
 
 struct FetchingWithOOView_Previews: PreviewProvider {
