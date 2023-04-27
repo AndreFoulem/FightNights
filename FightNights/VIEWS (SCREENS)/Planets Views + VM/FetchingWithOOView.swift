@@ -36,6 +36,15 @@ struct FetchingWithOOView: View {
           }
           .onDelete(perform: planetsOO.delete)
         }//list
+        .toolbar {
+          ToolbarItem {
+            Button {
+              insert.toggle()
+            } label: {
+              Image(systemName: "plus")
+            }
+          }
+        }
         .navigationTitle("Planets")
       }//ns
       .task {
