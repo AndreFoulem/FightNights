@@ -9,13 +9,13 @@ import SwiftUI
 
 struct FetchingWithOOView: View {
     // inject the OO
-    @StateObject var oo: PlanetsOO
+    @StateObject var planetsOO: PlanetsOO
     @State private var insert = false
   
     var body: some View {
       NavigationStack {
         List {
-          ForEach(oo.planets) { planet in
+          ForEach(planetsOO.planets) { planet in
             HStack {
               Image(uiImage: planet.viewImage)
                 .resizable()
@@ -34,15 +34,15 @@ struct FetchingWithOOView: View {
             }//hs
             .padding(.vertical, 6)
           }
-          .onDelete(perform: oo.delete)
+          .onDelete(perform: planetsOO.delete)
         }//list
         .navigationTitle("Planets")
       }//ns
       .task {
-        oo.fetch()
+        planetsOO.fetch()
       }
       .sheet(isPresented: $insert) {
-        
+        InsertPlanetView(planetsOO: planetsOO)
       }
       
     }//body
@@ -52,7 +52,7 @@ extension FetchingWithOOView {
  
   struct InsertPlanetView: View {
     //inject the OO
-    let oo: PlanetsOO
+    let planetsOO: PlanetsOO
     @State private var name = ""
     @Environment(\.dismiss) private var dismiss
     
@@ -63,7 +63,7 @@ extension FetchingWithOOView {
         TextField("enter planet name", text: $name)
           .textFieldStyle(.roundedBorder)
         Button("Save") {
-          oo.addPlanet(name: name)
+          planetsOO.addPlanet(name: name)
           dismiss()
         }
         .buttonStyle(.borderedProminent)
@@ -77,6 +77,6 @@ extension FetchingWithOOView {
 
 struct FetchingWithOOView_Previews: PreviewProvider {
     static var previews: some View {
-      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
+      FetchingWithOOView(planetsOO: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
     }
 }

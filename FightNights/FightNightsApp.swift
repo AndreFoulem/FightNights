@@ -21,7 +21,7 @@ struct FightNightsApp: App {
       
         WindowGroup {
             //: B -> Reference the viewContext in .environment
-          FetchingWithOOView(oo: PlanetsOO(moc: moc))
+          FetchingWithOOView(planetsOO: PlanetsOO(moc: moc))
         }
     }
 }
