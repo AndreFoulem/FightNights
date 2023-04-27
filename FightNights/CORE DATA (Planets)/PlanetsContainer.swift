@@ -73,6 +73,7 @@ extension PlanetsContainer {
     planet.position = position
     planet.picture =  UIImage(named: picture)?.pngData()
   }
+
 }
 
 

@@ -17,6 +17,7 @@ class PlanetsOO: ObservableObject {
     self.moc = moc
   }
   
+  //fetch()
   func fetch() {
     let request = PlanetEntity.fetchRequest()
     request.sortDescriptors = [NSSortDescriptor(keyPath: \PlanetEntity.position, ascending: true)]
@@ -24,6 +25,28 @@ class PlanetsOO: ObservableObject {
     if let planets = try? moc.fetch(request) {
       self.planets = planets
     }
-    
   }
+  
+  //delete(offsets:)
+  func delete(offsets: IndexSet) {
+    var deleteAtIndex: Int?
+    
+    for offset in offsets {
+      moc.delete(planets[offset])
+      deleteAtIndex = offset
+      break
+    }
+    
+    do {
+      try moc.save()
+      
+      if let deleteAtIndex {
+        planets.remove(at: deleteAtIndex)
+      }
+    } catch {
+      print("Error deleting item")
+    }
+  }
+  
+  //addPlanet(name:)
 }
