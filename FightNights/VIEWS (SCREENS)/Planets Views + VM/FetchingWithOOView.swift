@@ -10,6 +10,7 @@ import SwiftUI
 struct FetchingWithOOView: View {
     // inject the OO
     @StateObject var oo: PlanetsOO
+    @State private var insert = false
   
     var body: some View {
       NavigationStack {
@@ -39,6 +40,9 @@ struct FetchingWithOOView: View {
       }//ns
       .task {
         oo.fetch()
+      }
+      .sheet(isPresented: $insert) {
+        
       }
       
     }//body
