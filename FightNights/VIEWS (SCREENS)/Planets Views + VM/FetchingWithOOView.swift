@@ -11,6 +11,7 @@ struct FetchingWithOOView: View {
     // inject the OO
     @StateObject var planetsOO: PlanetsOO
     @State private var insert = false
+    @State private var selectedPlanet: PlanetEntity?
   
     var body: some View {
       NavigationStack {
@@ -32,6 +33,9 @@ struct FetchingWithOOView: View {
               }
               
             }//hs
+            .onTapGesture {
+              selectedPlanet = planet
+            }
             .padding(.vertical, 6)
           }
           .onDelete(perform: planetsOO.delete)
@@ -52,6 +56,9 @@ struct FetchingWithOOView: View {
       }
       .sheet(isPresented: $insert) {
         InsertPlanetView(planetsOO: planetsOO)
+      }
+      .sheet(item: $selectedPlanet) { planet in
+            
       }
       
     }//body
@@ -82,6 +89,8 @@ extension FetchingWithOOView {
       .padding()
     }
   }
+  
+  
 }
 
 struct FetchingWithOOView_Previews: PreviewProvider {
