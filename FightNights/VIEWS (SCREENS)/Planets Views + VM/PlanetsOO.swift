@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import UIKit
 
 class PlanetsOO: ObservableObject {
   
@@ -49,4 +50,18 @@ class PlanetsOO: ObservableObject {
   }
   
   //addPlanet(name:)
+  func addPlanet(name: String) {
+    let planet = PlanetEntity(context: moc)
+    planet.id = UUID()
+    planet.name = name
+    planet.picture = UIImage(named: "planetx")?.pngData()
+    planet.orbitalPeriod = [569, 11298, 4837, 85934].randomElement()!
+    
+    do {
+      try moc.save()
+      planets.append(planet)
+    } catch {
+      print("Failed to insert planet")
+    }
+  }
 }
