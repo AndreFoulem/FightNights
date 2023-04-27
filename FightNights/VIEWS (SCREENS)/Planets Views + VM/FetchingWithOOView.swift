@@ -48,6 +48,33 @@ struct FetchingWithOOView: View {
     }//body
 }
 
+extension FetchingWithOOView {
+ 
+  struct InsertPlanetView: View {
+    //inject the OO
+    let oo: PlanetsOO
+    @State private var name = ""
+    @Environment(\.dismiss) private var dismiss
+    
+    var body: some View {
+      VStack(spacing: 24.0) {
+        Text("New Planet")
+          .font(.largeTitle.weight(.bold))
+        TextField("enter planet name", text: $name)
+          .textFieldStyle(.roundedBorder)
+        Button("Save") {
+          oo.addPlanet(name: name)
+          dismiss()
+        }
+        .buttonStyle(.borderedProminent)
+        
+        Spacer()
+      }
+      .padding()
+    }
+  }
+}
+
 struct FetchingWithOOView_Previews: PreviewProvider {
     static var previews: some View {
       FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
