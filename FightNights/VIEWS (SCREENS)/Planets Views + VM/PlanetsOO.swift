@@ -64,4 +64,11 @@ class PlanetsOO: ObservableObject {
       print("Failed to insert planet")
     }
   }
+  
+  //updatePlanet(newPlanet:)
+  func updatePlanet(newPlanet: PlanetEntity) {
+    try? moc.save()
+    //-> use the ObservableObject built-in objectWillChange to notify the view to update itself
+    objectWillChange.send()
+  }
 }
