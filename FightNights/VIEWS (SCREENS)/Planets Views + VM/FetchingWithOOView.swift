@@ -58,7 +58,8 @@ struct FetchingWithOOView: View {
         InsertPlanetView(planetsOO: planetsOO)
       }
       .sheet(item: $selectedPlanet) { planet in
-            
+        UpdatePlanetView(oo: planetsOO, selectedPlanet: $selectedPlanet)
+          .presentationDetents([.height(200)])
       }
       
     }//body
