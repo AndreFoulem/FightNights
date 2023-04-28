@@ -90,6 +90,13 @@ extension FetchingWithOOView {
     }
   }
   
+  struct UpdatePlanetView: View {
+    var body: some View {
+      HStack {
+        
+      }
+    }
+  }
   
 }
 
