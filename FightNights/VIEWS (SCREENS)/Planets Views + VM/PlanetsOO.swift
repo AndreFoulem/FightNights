@@ -66,7 +66,7 @@ class PlanetsOO: ObservableObject {
   }
   
   //updatePlanet(newPlanet:)
-  func updatePlanet(newPlanet: PlanetEntity) {
+  func updatePlanet() {
     try? moc.save()
     //-> use the ObservableObject built-in objectWillChange to notify the view to update itself
     objectWillChange.send()

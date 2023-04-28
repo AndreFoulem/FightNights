@@ -91,9 +91,24 @@ extension FetchingWithOOView {
   }
   
   struct UpdatePlanetView: View {
+    //inject the OO
+    let oo: PlanetsOO
+    @Binding var selectedPlanet: PlanetEntity?
+    @Environment(\.dismiss) private var dismiss
+    @State private var name = ""
+    
     var body: some View {
-      HStack {
-        
+      VStack {
+        Text("Update Planet")
+          .font(.largeTitle.weight(.bold))
+        TextField("planet name", text: $name)
+          .textFieldStyle(.roundedBorder)
+      }
+      
+      Button("Save") {
+        selectedPlanet!.name = name
+        oo.updatePlanet()
+        dismiss()
       }
     }
   }
