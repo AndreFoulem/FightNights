@@ -9,14 +9,14 @@ import SwiftUI
 
 struct FetchingWithOOView: View {
     // inject the OO
-    @StateObject var planetsOO: PlanetsOO
+    @StateObject var oo: PlanetsOO
     @State private var insert = false
     @State private var selectedPlanet: PlanetEntity?
   
     var body: some View {
       NavigationStack {
         List {
-          ForEach(planetsOO.planets) { planet in
+          ForEach(oo.planets) { planet in
             HStack {
               Image(uiImage: planet.viewImage)
                 .resizable()
@@ -38,7 +38,7 @@ struct FetchingWithOOView: View {
             }
             .padding(.vertical, 6)
           }
-          .onDelete(perform: planetsOO.delete)
+          .onDelete(perform: oo.delete)
         }//list
         .toolbar {
           ToolbarItem {
@@ -52,13 +52,13 @@ struct FetchingWithOOView: View {
         .navigationTitle("Planets")
       }//ns
       .task {
-        planetsOO.fetch()
+        oo.fetch()
       }
       .sheet(isPresented: $insert) {
-        InsertPlanetView(planetsOO: planetsOO)
+        InsertPlanetView(planetsOO: oo)
       }
       .sheet(item: $selectedPlanet) { planet in
-        UpdatePlanetView(oo: planetsOO, selectedPlanet: $selectedPlanet)
+        UpdatePlanetView(oo: oo, selectedPlanet: $selectedPlanet)
           .presentationDetents([.height(200)])
       }
       
@@ -118,6 +118,6 @@ extension FetchingWithOOView {
 
 struct FetchingWithOOView_Previews: PreviewProvider {
     static var previews: some View {
-      FetchingWithOOView(planetsOO: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
+      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
     }
 }
