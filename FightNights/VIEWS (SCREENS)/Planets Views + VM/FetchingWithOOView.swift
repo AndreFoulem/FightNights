@@ -116,8 +116,8 @@ extension FetchingWithOOView {
   
 }
 
-//struct FetchingWithOOView_Previews: PreviewProvider {
-//    static var previews: some View {
-//      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
-//    }
-//}
+struct FetchingWithOOView_Previews: PreviewProvider {
+    static var previews: some View {
+      FetchingWithOOView(oo: PlanetsOO(moc: PlanetsContainer.shared.container.viewContext ))
+    }
+}
